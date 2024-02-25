@@ -1,0 +1,181 @@
+
+/* defining an order for list items so it is easy to keep track
+height
+width
+margin
+border
+padding
+display and flex properties (e.g. display: flex; flex-wrap: wrap;)
+background-color
+color
+line-height
+font-family
+font-size
+text-align
+*/
+
+html {
+	min-height: 100vh; /* 100% viewport height */
+	height: 100vh;
+	margin: 0; /* order from outside-to-inside = margin, border, padding, contents */
+	padding: 0; 
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #0F4539;
+    color: black;
+    font-size:25px;
+    font-family: Helvetica, sans-serif;
+    
+}
+.dark { /* set dark colour scheme for overriding here */
+    background-color: #071f19;
+    color: white;
+}
+img {
+    max-height: 100%;
+    max-width: 100%;
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+button { /* defines button */
+    height: 30px;
+    font-size: 14px;
+    line-height: 1.35;
+    width: 140px;
+    background-color: white;
+    color: black;
+    }
+
+.flex-container { /* defines the parent flex-container */
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    display: flex;    
+    flex-wrap: nowrap;
+}
+
+.flex-container > .centerpanel { /* defines a division within flex-container, i.e. a column */
+    min-height: 100vh;
+    height: 100vh;  
+    width: 60%;
+    max-width: 60%;
+    margin: 0;
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff4e4;
+   /* overflow: auto; /* this plus max-height makes the section scroll rather than get too tall */
+    flex: 10 1 50%; /* shorthand for (in order): flex-grow, flex-shrink, flex-basis */
+    line-height: 30px;
+    font-size: 20px;
+    
+}
+.dark > .flex-container > .centerpanel {
+    background-color: #645f57;
+}
+
+.flex-container > .centerpanel > .imgbox {
+max-height: 50%;
+display: flex;
+flex: 1 0 50%;
+justify-content: space-around;
+align-items: center;
+}
+.flex-container > .centerpanel > .textbox {
+    max-height: 35%;
+    overflow: auto;
+    display: flex;
+    line-height: 1.5en;
+    font-size: 20px;
+    font-family: Courier, monospace;
+    text-align: left;
+    flex: 1 1 35%;
+    flex-direction:column;
+}
+
+.flex-container > .centerpanel > .buttonbox {
+    height: 15%;
+    display: flex;
+    flex: 1 0 15%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flex-container > .centerpanel > .buttonbox > .optionbutton {
+    margin: 30px;
+    height: 60px;
+    font-size: 14px;
+    line-height: 1.35;
+    width: 140px;
+    background-color: #C8EBD6;
+    color: black; 
+    border-radius: 15%;
+   
+}
+.flex-container > .centerpanel > .buttonbox > .optionbutton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.6s;
+}
+
+.flex-container > .centerpanel > .titlebox {
+    height: 5%;
+    display: flex;
+    flex: 1 0 5%;
+    align-self: flex-start;
+    line-height: 25px; 
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align-left;
+}
+.flex-container > .sidepanel {
+    height:100vh;
+    width: 20%;
+    padding: 10px;
+    margin: 0;
+    flex: 1 0 10%;
+    line-height: 20px;
+    font-size:12px;
+    text-align: right;
+     
+}
+
+/* .dark > .flex-container > .sidepanel {
+   
+} 
+/*.flex-container > .div1 {
+    background-color: #fff4e4;
+    padding: 50px;
+    width: 20%;
+    margin: 10px;
+    line-height: 30px;
+    font-size: 200px;
+    border-style: solid;
+    border-width: medium;
+    border-color: #3d2704;
+    border-radius: 5px; 
+    padding: 10px;
+    overflow: auto; /* this plus max-height makes the section scroll rather than get too tall */
+    /*max-height: 1000px;
+    flex: 10 1 20%; /* shorthand
+}
+
+.flex-container > .sidepanel {
+    width: 10%;
+    padding: 10px;
+    margin: 10px;
+    line-height: 20px;
+    font-size:12px;
+    height: 200px;
+    text-align: right;
+    flex: 1 0 10%; 
+}
