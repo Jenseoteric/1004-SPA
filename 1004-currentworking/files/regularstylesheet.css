@@ -1,0 +1,145 @@
+:root { 
+	background-color: #004850; /* default color scheme for document */
+	color: black;
+}
+
+@media (prefers-color-scheme: dark) { /* alt color scheme for dark browser settings */
+	:root {
+		background-color: #061B16;
+		color: white;
+	}
+}
+
+html {
+	height: 100%; /*older browsers may use % */
+	height: 100vh; /*newer browsers may prefer viewport height vh */
+}
+
+body {
+	min-height: 100%;
+	min-height: 100vh;
+	height: 100%;
+	margin: 0; /* required to ensure body leaves no gap at top */
+	padding: 0; 
+	height: auto; /* grows as content grows */	
+	overflow: hidden; /* stops scrollbar appearing for body */
+}
+
+img {
+	max-height: 100%; /* with flex image will resize to fit */
+	max-width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+p {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 150%;
+}
+
+button { /* defines default button */
+	margin: 15px;
+	padding: 32px 32px;
+	border-radius: 8px;
+	font-size: 16px;
+	background-color: white;
+	color: black;
+}
+
+.main_content {
+	min-height: 100%; /* to ensure div expands vertically */
+	min-height: 100vh;
+	width: 75%;
+	margin: auto; /* centers container */
+	background-color: #ede6d1;
+	overflow: auto; /* div background colour will fill page vertically, adds auto scrollbar */
+	justify-content: start; /* ??? */
+}
+
+.flex_container { /* defines the parent flex-container */
+    height: 95vh;
+    max-height: 768px;
+    width: 85%;
+    margin: auto; /* centres container */
+    padding-top: 3%; /* distance from top */
+    padding-bottom: 10px;
+    display: flex;    
+    flex-wrap: nowrap;
+    flex-direction: column;
+    row-gap: 10px; /* gap between items */ 
+}
+
+/* responsive sizes for different viewports */
+/*CHECK THESE AGAIN!!
+reference: common phone sizes 360x800, 390x844, 414x896
+reference: common tablet sizes 1280x800, 1024x768 - this will be default size
+reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
+
+@media (max-width: 450px) { /* for mobile phones, check sizes! */
+	p {
+		font-size: 14px;
+	}
+	.main_content {
+		width: 80%;
+	}
+	.flex_container {
+		padding-top: 10%;
+		padding-bottom: 10%;
+		width: 90%;
+		max-height: 800px;
+	}
+}
+
+@media (min-width: 1440px) { /* for desktops, check sizes! */
+	p {
+		font-size: 18px;
+	}
+	.main_content {
+		min-width: 1070px;
+		width: 65%;
+	}
+	.flex_container {
+		width: 900px;
+		max-height: 900px;
+	}
+}
+
+.flex_container > .image_box {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex_container > .text_box {
+	flex: 1;
+}
+
+.flex_container > .activity_box {
+	min-height: 15%;
+	max-height: 25%;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.flex_container > .activity_box > .optionbutton {
+	margin: 0;
+	width: 47%;
+	height: 100%;
+	background-color: #968884;
+	padding: 10px 10px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.flex_container > .activity_box > .optionbutton:hover { /* tells user the button is interactive */
+	background-color: #8a7a75;
+	box-shadow: -3px 3px #666;
+}
+
+.flex_container > .activity_box > .optionbutton > .disabled { /* tells user the button is disabled */
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+

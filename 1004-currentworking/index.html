@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width-device-width, initial-scale=1.0"> <!-- responsive viewport size -->
+	<meta name="color-scheme" content="light dark"> <!-- supports light and dark schemes but prioritises light, in case css unavailable -->
+	<meta name="keywords" content="text adventure game">
+	<meta charset="utf-8">
+	<title>Forest Mystery</title>
+	<link rel="stylesheet" href="files/regularstylesheet.css"> <!-- links to css sheet for this page -->
+</head>
+
+<body>
+	<div class="main_content">
+		
+		<div class="flex_container">
+	
+			<div class="image_box">
+				<img id="chapterimage" src="">	
+			</div>
+		
+			<div class="text_box">
+				<p id="chapter">Once upon a time there was a man who did nothing but gamble, and for that reason people never called him anything but Gambling Hansel, and as he never ceased to gamble, he played away his house and all that he had. Now the very day before his creditors were to take his house from him, came the Lord and St. Peter, and asked him to give them shelter for the night. Then Gambling Hansel said, "For my part, you may stay the night, but I cannot give you a bed or anything to eat."</p>
+				<p id="inv">Inventory: </p>
+				<p id="timetracker">Time passed: </p>
+			</div>
+		
+			<div class="activity_box">
+				<button id="button1" class="optionbutton"></button>
+				<button id="button2" class="optionbutton"></button>
+			</div>
+		
+		</div>
+		    <form id="cheatform" onsubmit="return false"><label>Cheatcode</label><br><input type="text" id="cheatcode"></form>
+	</div>
+
+</body>
+
+
+
+<script src="files/forestscript.js"></script>
+<script src="files/forestdata.js"></script> 
+<script src="files/timerscript.js"></script> 
+
+</html>
