@@ -3,7 +3,7 @@
 var data100 = {
   id: "data100",
   text: "You have been driving your truck for hours now, and as you feel like youre about to get ready to stop and sleep soon, some beast dashes into the way with a screech, and you instinctually turn your wheel and end up in a destructive car crash.", 
-  image: "siteimage.png",
+  image: "start.png ",
   optionkey1: "data101",
   optionkey2: "data101",
   button1txt: "Open your eyes",
@@ -16,7 +16,7 @@ var data100 = {
 var data101 = {
   id: "data101",
   text: "After an unknown amount of time, you wake up to a brutal wreck of your truck in the forest, you are in a state of shock and delirium, but the sight of a trail of yellow liquid catches your focus", 
-  image: "", 
+  image: "trail.jpg", 
   optionkey1: "data102",
   optionkey2: "data103",
   button1txt: "Search the wreckage",
@@ -29,20 +29,20 @@ var data101 = {
 var data102 = {
   id: "data102",
   text: "You find your phone, but see that it is seemingly irreperably damaged, however, in the glove compartment, you find a lighter, which you figure may be useful in the future", 
-  image: "", 
+  image: "findlighter.jpg", 
   optionkey1: "data103",
   optionkey2: "data103",
   button1txt: "Follow the trail of mysterious liquid",
   button2txt: "Follow the trail of mysterious liquid",
   isSpecial: "1",
   addtext: "",
-  notefordev: "inv+ lighter, grey out option2"
+  notefordev: "inv+ lighter, inv+ Broken Phone, grey out option2"
 }
 
 var data103 = {
   id: "data103",
   text: "After a while of nervously following the orange trail, it stops at a wild block of foliage, with orange drops coating the green", 
-  image: "", 
+  image: "foliagetrail.jpeg", 
   optionkey1: "data104",
   optionkey2: "data105",
   button1txt: "Search the foliage",
@@ -55,7 +55,7 @@ var data103 = {
 var data104 = {
   id: "data104",
   text: "Hidden underneath and behind the foliage, is a boulder, lit with two candles, with the letter \"I\" eerily painted on the surface. ", 
-  image: "", 
+  image: "boulder.jpeg", 
   optionkey1: "data103",
   optionkey2: "data103",
   button1txt: "Go back to the trail",
@@ -68,7 +68,7 @@ var data104 = {
 var data105 = {
   id: "data105",
   text: "You continue to hike through the woods, and it has bought you to an uphill clearing that glows with moonlight, as you search the horizon for any sign of help, you find yourself more hopeless than previously thought, as treetops stretch out forever.", 
-  image: "", 
+  image: "clearing.jpeg", 
   optionkey1: "data106",
   optionkey2: "data101",
   button1txt: "Go to the clearing",
@@ -81,7 +81,7 @@ var data105 = {
 var data106 = {
   id: "data106",
   text: "The clearing is lit with three candles, and the character \"T\" is clumsily skidded on the ground. Ahead are two paths, one stretches out through a claustrophobic, winding, forested path, the other path looks more tame, is paved with gravel and looks like it might lead less far into the woods", 
-  image: "", 
+  image: "threecandles.png", 
   optionkey1: "data107",
   optionkey2: "data108",
   button1txt: "Take the forested path",
@@ -94,7 +94,7 @@ var data106 = {
 var data107 = {
   id: "data107",
   text: "After trekking through this path, all along the way trying to remember how to pathfind back to what was your truck, you spot a cabin, with no signs of life within, with windows just as dark as the night sky.", 
-  image: "", 
+  image: "cabinoutside.jpg", 
   optionkey1: "data106",
   optionkey2: "data110",
   button1txt: "Go back to the clearing",
@@ -107,7 +107,7 @@ var data107 = {
 var data108 = {
   id: "data108",
   text: "After trodding through this path, it seems to have led you back to the highway you crashed on, and as you squint into the distance you can see the gore that once your truck in the road, but something bizarre catches your eye, you notice a stationary door just standing still on the other side of the road.", 
-  image: "", 
+  image: "mysterydoor.jpg", 
   optionkey1: "data111",
   optionkey2: "data120",
   button1txt: "Examine the door",
@@ -135,7 +135,7 @@ var data109 = {
 var data110 = {
   id: "data110",
   text: "You open the cabin door, hoping there might be something or someone to help you, but as you open the creaky, rotting door, the lights within the house turn on automatically, which was not something you had expected from a cabin that looks like it was built a long time ago. You walk into what seems to be the main room of the cabin, and you notice this strange painting on the wall that shows a boy holding a single lit candle on a bed, with the letter \"L\" imprinted into the corner of the portrait.", 
-  image: "", 
+  image: "mainroom.jpg", 
   optionkey1: "data110",
   optionkey2: "data114",
   button1txt: "Go back outside",
@@ -161,7 +161,7 @@ var data111 = {
 var data112 = {
   id: "data112",
   text: "You scramble for your key, and as you twist the key into the door, you hear a satisfying loud thud within the door, and as you open it, this mystical blue light eminates from the door, as you see this fantastic sight, you run around to look at the back of the door, only to see the regular scenery through the open door. As you go back to the front of the door, you take a deep breath as if you were to take a dive into water, and you walk into the sparkling light of this magic door.", 
-  image: "", 
+  image: "magicdoor.jpg", 
   optionkey1: "data112",
   optionkey2: "data112",
   button1txt: "You have completed this level",
@@ -174,7 +174,7 @@ var data112 = {
 var data113 = {
   id: "data113",
   text: "The light from the candle reveals a secret hatch in the ground on the other side of the room.", 
-  image: "", 
+  image: "hatchopen.jpg", 
   optionkey1: "data116",
   optionkey2: "data110",
   button1txt: "Go through the hatch",
@@ -187,7 +187,7 @@ var data113 = {
 var data114 = {
   id: "data114",
   text: "You walk through the only unlocked door in the cabin, which leads to what you imagine is a bedroom, but its very, very dimly lit, which is making you worry if you're alone in this room", 
-  image: "", 
+  image: "darkbedroom.jpg", 
   optionkey1: "data110",
   optionkey2: "data110",
   button1txt: "Go to the main room",
@@ -200,7 +200,7 @@ var data114 = {
 var data115 = {
   id: "data115",
   text: "The light from the candle reveals some more detail about the room, and you are shocked by the sounds of stone turning and scraping across the floor as a secret hatch opens up in the ground on the other side of the room. ", 
-  image: "", 
+  image: "hatchopen.jpg", 
   optionkey1: "data110",
   optionkey2: "data116",
   button1txt: "Go back to the main room",
@@ -226,7 +226,7 @@ var data116 = {
 var data117 = {
   id: "data117",
   text: "Full of anticipation, you input the last letter, and the monkey's mouth gapes open, and within it holds a key.", 
-  image: "", 
+  image: "monkeykey.jpg", 
   optionkey1: "data121",
   optionkey2: "data121",
   button1txt: "Go back to the bedroom",
@@ -252,7 +252,7 @@ var data118 = {
 var data119 = {
   id: "data119",
   text: "You search for anything else you could possibly use from the wreckage, but you are left with nothing.", 
-  image: "", 
+  image: "findlighter.jpg", 
   optionkey1: "data103",
   optionkey2: "data103",
   button1txt: "Follow the trail of mysterious liquid",
@@ -265,7 +265,7 @@ var data119 = {
 var data120 = {
   id: "data120",
   text: "You have arrived back at the wreckage of your truck.", 
-  image: "", 
+  image: "truckwreck.jpg", 
   optionkey1: "data102",
   optionkey2: "data103",
   button1txt: "Search the wreckage, again",
@@ -278,7 +278,7 @@ var data120 = {
 var data121 = {
   id: "data121",
   text: "As you crawl out of the hatch with the Monkey themed puzzle, you look behind you, and to your surprise, where was a hole in the wall, is now just a flawless, flat continuation of the rotten wallpaper. You walk hastily back into the main room, but on the way, a door catches your eye, a door you're not sure was there when you came into the bedroom.",
-  image: "", 
+  image: "closedhatchbedroom", 
   optionkey1: "data122",
   optionkey2: "data123",
   button1txt: "Open the mysterious door",
@@ -304,7 +304,7 @@ var data122 = {
 var data123= {
   id: "data123",
   text: "You return to the main room, and your eyes return to the painting on the wall of the boy with the candle, and your mind is filled with questions, like how is this possible, and who might have set this up?",
-  image: "", 
+  image: "mainroom.jpg", 
   optionkey1: "data109",
   optionkey2: "data109",
   button1txt: "Leave the cabin",

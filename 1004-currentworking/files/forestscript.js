@@ -43,13 +43,13 @@ function readinitialdata() {
 
 // button selector
 
-playerchoice1 = document.getElementById("button1");
+playerchoice1 = document.getElementById("button1"); //USE BUTTON1 INSTEAD!!
 playerchoice1.addEventListener("click", () => { 
   nextid = option1;
   readnextdata();
 })
 
-playerchoice2 = document.getElementById("button2");
+playerchoice2 = document.getElementById("button2"); //USE BUTTON2 INSTEAD!!
 playerchoice2.addEventListener("click", () => {
   nextid = option2;
   readnextdata();
@@ -64,7 +64,7 @@ console.log(cheatform);
 cheatform.addEventListener("submit", () => {
    var cheatcode = document.getElementById("cheatcode").value;
    console.log(cheatcode);
-   nextid = eval(cheatcode);
+   nextid = eval(cheatcode); // ?????
    readnextdata();
 })
 
@@ -85,7 +85,7 @@ function readnextdata() {
   thistext = thisid.text;
   option1 = thisid.optionkey1;
   option2 = thisid.optionkey2;
-  chapter.innerHTML = thistext;
+  chapter.innerHTML = thistext; 
   button1.innerHTML = thisid.button1txt;
   button2.innerHTML = thisid.button2txt;
   myimage = thisid.image;
@@ -114,7 +114,7 @@ function doSpecial() {
       option1 = data108;
       button1.innerHTML = "Go back to the strange door";
     }
-    if (lighter) {
+    if (lighter) { // CHECK!!!
         option1 = data119;
     }
     break; 
@@ -131,12 +131,12 @@ function doSpecial() {
     }
     break;
 
-  case 109:
+  case 109: //!!!!!!!! not needed??
     creature = 1;
     invlist.innerHTML += "<li>creature</li>";
     break;
 
-  case 110:
+  case 110: // check!!?
     option2 = data114;
     if (key) {
       option1 = data109;
@@ -147,7 +147,7 @@ function doSpecial() {
     }
     break;
 
-  case 111:
+  case 111: // check if the candle already exists first!!!
     candle = 1;
     invlist.innerHTML += "<li>candle</li>";
     break;
@@ -182,7 +182,6 @@ function doSpecial() {
     key = 1;
     invlist.innerHTML += "<li>key</li>";
     break;
-
 
   case 120:
     option1 = data102;
