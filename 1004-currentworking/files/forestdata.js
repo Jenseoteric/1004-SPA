@@ -16,7 +16,7 @@ var data100 = {
 var data101 = {
   id: "data101",
   text: "After an unknown amount of time, you wake up to a brutal wreck of your truck in the forest, you are in a state of shock and delirium, but the sight of a trail of yellow liquid catches your focus", 
-  image: "trail.jpg", 
+  image: "truckwreck.jpg", 
   optionkey1: "data102",
   optionkey2: "data103",
   button1txt: "Search the wreckage",
@@ -122,7 +122,7 @@ var data108 = {
 var data109 = {
   id: "data109",
   text: "As you step outside, just as you are about to inhale the fresh night air, you see something moving on the path you came from recently, and you realise it is a very strange, horrifying looking man, or some kind of beast that could be mistaken for one. It is wearing some kind of contraption on it\'s head, and it looks poised to pounce and attack you.",
-  image: "", 
+  image: "monstercabin.jpg", 
   optionkey1: "data130",
   optionkey2: "data131",
   button1txt: "Run from the monster",
@@ -148,7 +148,7 @@ var data110 = {
 var data111 = {
   id: "data111",
   text: "Even though you can see the back of this door, and how it leads to nothing, you are compelled to try and open it anyway, but the door is locked. You notice a candle holder next to the handle.", 
-  image: "", 
+  image: "candleholder.jpg", 
   optionkey1: "data106",
   optionkey2: "data120",
   button1txt: "Go back to the clearing",
@@ -278,7 +278,7 @@ var data120 = {
 var data121 = {
   id: "data121",
   text: "As you crawl out of the hatch with the Monkey themed puzzle, you look behind you, and to your surprise, where was a hole in the wall, is now just a flawless, flat continuation of the rotten wallpaper. You walk hastily back into the main room, but on the way, a door catches your eye, a door you're not sure was there when you came into the bedroom.",
-  image: "closedhatchbedroom", 
+  image: "closedhatchbedroom.jpg", 
   optionkey1: "data122",
   optionkey2: "data123",
   button1txt: "Open the mysterious door",
@@ -291,7 +291,7 @@ var data121 = {
 var data122 = {
   id: "data122",
   text: "You take a few steps towards the door, and you place your hand upon the ornate round metal handle, but as you twist your wrist to push open the door, you notice that its locked shut.", 
-  image: "", 
+  image: "strangedoor.jpg", 
   optionkey1: "data124",
   optionkey2: "data123",
   button1txt: "Unlock the door with the Monkey Key",
@@ -304,7 +304,7 @@ var data122 = {
 var data123= {
   id: "data123",
   text: "You return to the main room, and your eyes return to the painting on the wall of the boy with the candle, and your mind is filled with questions, like how is this possible, and who might have set this up?",
-  image: "mainroom.jpg", 
+  image: "mainroom.jpg  ", 
   optionkey1: "data109",
   optionkey2: "data109",
   button1txt: "Leave the cabin",
@@ -317,7 +317,7 @@ var data123= {
 var data124= {
   id: "data124",
   text: "You pull the Monkey Key from your pocket, and attempt to unlock the door with the key, but as you insert the key, you realise this key does not fit the lock. You get a sudden electric shock, and for whatever reason the words \"Use the key well, and you may find yourself here again in the future\" manifest in your mind.",
-  image: "", 
+  image: "doormessage.jpg", 
   optionkey1: "data125",
   optionkey2: "data123",
   button1txt: "Attempt to force the door open by bashing it down",
@@ -330,7 +330,7 @@ var data124= {
 var data125= {
   id: "data125",
   text: "In an act of frustration, you take a few steps back, and ram into the door to attempt to knock it off it\'s hinges, as you do this, the door collapses, and you fall into the room, only you never land on the ground, as you now find yourself free falling through a dank, seemingly endless space. You begin to lose consciousness, and the last thought you have is \"why would anyone build this room!?\"",
-  image: "", 
+  image: "void.jpg", 
   optionkey1: "data999",
   optionkey2: "data999",
   button1txt: "Game Over",
@@ -371,7 +371,7 @@ var data126 = {
  var data130 = {
   id: "data130",
   text: "You sprint past the beast through the path you came from, and you hear the thud of footsteps as the beast pursues you, however, no matter how fast you run, the beast manages to outpace you, and you are soon caught, and eaten. ",
-  image: "", 
+  image: "imgdata999.jpg", 
   optionkey1: "data999",
   optionkey2: "data999",
   button1txt: "Game Over",
@@ -385,7 +385,7 @@ var data126 = {
 var data131 = {
   id: "data131",
   text: "You notice a hefty rock placed on the fence just to right, the beast suddenly lunges at you, in a terrified panic, you reach over for the boulder with both hands and smack the beast's strange headpiece. An ear splitting *CLANG* sounds and echoes from the forest around you, the monster clasps it's face with it's hands, giving you a moment to escape.",
-  image: "", 
+  image: "monsterbash.jpg", 
   optionkey1: "data132",
   optionkey2: "data132",
   button1txt: "Continue",
@@ -398,11 +398,11 @@ var data131 = {
 var data132 = {
   id: "data132",
   text: "You run as fast as you can down the path for what feels like forever, and your body is aching with pain, you come across the divergence in the paths you came by earlier, you must think fast before the monster catches up to you",
-  image: "", 
-  optionkey1: "data133",
-  optionkey2: "data134",
-  button1txt: "Run through the Gravel Path",
-  button2txt: "Run to the clearing",
+  image: "2paths.png", 
+  optionkey1: "data134",
+  optionkey2: "data133",
+  button1txt: "Run to the clearing",
+  button2txt: "Run through the Gravel Path",
   isSpecial: "",
   addtext: "",
   notefordev: "creature encounter! nothing set yet"
@@ -411,7 +411,7 @@ var data132 = {
 var data133 = {
   id: "data133",
   text: "You commit to running down the path that goes down towards the road, and as you make it to the concrete of the highway, unsure what to do, you remember the door you had seen earlier, and are compelled to try to unlock it with the key you found from the Monkey statue. As the key fits in the lock, a fantastic light eminates from the cracks of the door, as you swing it open, you see that it is a magical portal. As you hesitate to enter the unknown inside of the door, you hear the beast has your trail, and will catch you soon, so you are left with no choice.",
-  image: "", 
+  image: "magicdoor.jpg", 
   optionkey1: "data999",
   optionkey2: "data999",
   button1txt: "End of chapter 1",
@@ -424,7 +424,7 @@ var data133 = {
 var data134 = {
   id: "data133",
   text: "You commit to running down the path that leads to the clearing, but you notice as you run uphill, that the beast is now catching up to you, and even if you reach the clearing, there is nowhere to hide.",
-  image: "", 
+  image: "imgdata999.jpg", 
   optionkey1: "data999",
   optionkey2: "data999",
   button1txt: "Game Over",
