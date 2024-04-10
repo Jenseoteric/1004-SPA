@@ -133,7 +133,7 @@ reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 .flex_container > .activity_box > .optionbutton {
 	margin: 0;
 	width: 47%;
-	height: 100%;
+	height: 60%;
 	background-color: #968884;
 	padding: 10px 10px;
 	text-align: left;

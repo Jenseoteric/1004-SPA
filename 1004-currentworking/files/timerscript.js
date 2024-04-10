@@ -17,7 +17,7 @@ function getTimeElapsed() { // calculates time elapsed since page load
 function updateTimeTracker() { // updates "time passed" paragraph
 	getTimeElapsed();
 	let text = (hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
-	timetracker.textContent = ("Time passed: " + text);
+	//timetracker.textContent = ("Time passed: " + text);
 }
 
 function timer() {

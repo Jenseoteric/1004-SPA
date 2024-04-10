@@ -2,7 +2,7 @@
 
 var data100 = {
   id: "data100",
-  text: "You have been driving your truck for hours now, and as you feel like youre about to get ready to stop and sleep soon, some beast dashes into the way with a screech, and you instinctually turn your wheel and end up in a destructive car crash.", 
+  text: "You have been driving your truck for hours, and you feel your eyelids getting heavy. Suddenly something dashes into the road and in a panic, you spin your wheel and swerve... and everything goes black. ", 
   image: "start.png ",
   optionkey1: "data101",
   optionkey2: "data101",
@@ -15,7 +15,7 @@ var data100 = {
 
 var data101 = {
   id: "data101",
-  text: "After an unknown amount of time, you wake up to a brutal wreck of your truck in the forest, you are in a state of shock and delirium, but the sight of a trail of yellow liquid catches your focus", 
+  text: "An unknown amount of time later, you wake up surrounded by the brutal wreck of your truck. You are in a state of shock and delirium, but the sight of a trail of orange liquid catches your eye.", 
   image: "truckwreck.jpg", 
   optionkey1: "data102",
   optionkey2: "data103",
@@ -28,7 +28,7 @@ var data101 = {
 
 var data102 = {
   id: "data102",
-  text: "You find your phone, but see that it is seemingly irreperably damaged, however, in the glove compartment, you find a lighter, which you figure may be useful in the future", 
+  text: "You find your phone but it is irreparably damaged. However, elsewhere in the glove compartment you find a lighter, which you figure may be useful in the future.", 
   image: "findlighter.jpg", 
   optionkey1: "data103",
   optionkey2: "data103",
@@ -41,8 +41,8 @@ var data102 = {
 
 var data103 = {
   id: "data103",
-  text: "After a while of nervously following the orange trail, it stops at a wild block of foliage, with orange drops coating the green", 
-  image: "foliagetrail.jpeg", 
+  text: "You nervously follow the orange trail uphill, feeling extremely vulnerable as you make your way through the trees. The trail stops at a wild block of foliage, its' leaves smeared and splattered with the orange fluid.", 
+  image: "foliagetrail.jpg", 
   optionkey1: "data104",
   optionkey2: "data105",
   button1txt: "Search the foliage",
@@ -54,12 +54,12 @@ var data103 = {
 
 var data104 = {
   id: "data104",
-  text: "Hidden underneath and behind the foliage, is a boulder, lit with two candles, with the letter \"I\" eerily painted on the surface. ", 
-  image: "boulder.jpeg", 
-  optionkey1: "data103",
-  optionkey2: "data103",
-  button1txt: "Go back to the trail",
-  button2txt: "Go back to the trail",
+  text: "Hidden behind the foliage is a boulder lit with two candles. The letter \"I\" has been eerily engraved on its surface. ", 
+  image: "boulder.jpg", 
+  optionkey1: "data105",
+  optionkey2: "data105",
+  button1txt: "Keep going uphill",
+  button2txt: "Keep going uphill",
   isSpecial: "1",
   addtext: "",
   notefordev: "grey out option2"
@@ -67,8 +67,8 @@ var data104 = {
 
 var data105 = {
   id: "data105",
-  text: "You continue to hike through the woods, and it has bought you to an uphill clearing that glows with moonlight, as you search the horizon for any sign of help, you find yourself more hopeless than previously thought, as treetops stretch out forever.", 
-  image: "clearing.jpeg", 
+  text: "You continue to hike through the woods until you reach the top of the hill. The forest glows with moonlight, but you find yourself feeling hopeless as the treetops seem to stretch out forever. As you search for any sign of hope, you notice a clearing amongst the trees.", 
+  image: "clearing.jpg", 
   optionkey1: "data106",
   optionkey2: "data101",
   button1txt: "Go to the clearing",
@@ -80,7 +80,7 @@ var data105 = {
 
 var data106 = {
   id: "data106",
-  text: "The clearing is lit with three candles, and the character \"T\" is clumsily skidded on the ground. Ahead are two paths, one stretches out through a claustrophobic, winding, forested path, the other path looks more tame, is paved with gravel and looks like it might lead less far into the woods", 
+  text: "The clearing is lit with three candles, and you find more of the orange luminescent fluid pooling inside the character \"T\" which has been etched into the ground. Ahead are two paths, one a is winding, forested path, the other path is paved with gravel.", 
   image: "threecandles.png", 
   optionkey1: "data107",
   optionkey2: "data108",
@@ -93,7 +93,7 @@ var data106 = {
 
 var data107 = {
   id: "data107",
-  text: "After trekking through this path, all along the way trying to remember how to pathfind back to what was your truck, you spot a cabin, with no signs of life within, with windows just as dark as the night sky.", 
+  text: "You decide to walk down the forest path, but soon you begin to doubt your decision as the trees canopy overhead blocks out all moonlight. Just as you are losing hope, you stumble out of the undergrowth. Not too far ahead of you is a cabin. The windows are as dark as the night sky, and there are no signs of life within.", 
   image: "cabinoutside.jpg", 
   optionkey1: "data106",
   optionkey2: "data110",
@@ -136,7 +136,7 @@ var data110 = {
   id: "data110",
   text: "You open the cabin door, hoping there might be something or someone to help you, but as you open the creaky, rotting door, the lights within the house turn on automatically, which was not something you had expected from a cabin that looks like it was built a long time ago. You walk into what seems to be the main room of the cabin, and you notice this strange painting on the wall that shows a boy holding a single lit candle on a bed, with the letter \"L\" imprinted into the corner of the portrait.", 
   image: "mainroom.jpg", 
-  optionkey1: "data110",
+  optionkey1: "data107",
   optionkey2: "data114",
   button1txt: "Go back outside",
   button2txt: "Go to the bedroom",

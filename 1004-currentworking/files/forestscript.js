@@ -107,7 +107,7 @@ function doSpecial() {
 
   switch(checkid) {
 
-  case 101:
+  /*case 101:
     option1 = data102;
     option2 = data103;
     if (key) { // if the variable is found
@@ -117,7 +117,7 @@ function doSpecial() {
     if (lighter) { // CHECK!!!
         option1 = data119;
     }
-    break; 
+    break; */
 
   case 102:
     lighter = 1;
