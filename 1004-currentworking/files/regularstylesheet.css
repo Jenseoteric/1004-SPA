@@ -148,8 +148,7 @@ reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 	box-shadow: -3px 3px #666;
 }
 
-.flex_container > .activity_box > .optionbutton > .disabled { /* tells user the button is disabled */
-	opacity: 0.5;
+.disabled {
+	opacity: 0.2;
 	cursor: not-allowed;
 }
-

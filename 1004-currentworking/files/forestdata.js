@@ -8,7 +8,7 @@ var data100 = {
   optionkey1: "data101",
   optionkey2: "data101",
   button1txt: "Open your eyes",
-  button2txt: "Open your eyes",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "disable option2"
@@ -36,7 +36,7 @@ var data102 = {
   optionkey1: "data103",
   optionkey2: "data103",
   button1txt: "Follow the trail of mysterious liquid",
-  button2txt: "Follow the trail of mysterious liquid",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "inv+ lighter, inv+ Broken Phone, disable option2"
@@ -64,7 +64,7 @@ var data104 = {
   optionkey1: "data105",
   optionkey2: "data105",
   button1txt: "Keep going uphill",
-  button2txt: "Keep going uphill",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "disable option2"
@@ -178,7 +178,7 @@ var data112 = {
   optionkey1: "data112",
   optionkey2: "data112",
   button1txt: "You have completed this level",
-  button2txt: "You have completed this level",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "disable option2 button"
@@ -373,7 +373,7 @@ var data126 = {
   optionkey1: "data100",
   optionkey2: "data100",
   button1txt: "Play again?",
-  button2txt: "Play again?",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: ""
@@ -387,7 +387,7 @@ var data127 = {
   optionkey1: "data100",
   optionkey2: "data100",
   button1txt: "Play again?",
-  button2txt: "Play again?",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: ""
@@ -428,7 +428,7 @@ var data126 = {
   optionkey1: "data126",
   optionkey2: "data126",
   button1txt: "Continue",
-  button2txt: "Continue",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "disable second option button"

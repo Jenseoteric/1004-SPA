@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // first chapter load
 
 function readinitialdata() {
+  button2.disabled = true;
+  button2.classList.add("disabled");
   thisid = data100;
   thistext = thisid.text;
   console.log(thisid);
@@ -74,7 +76,9 @@ cheatform.addEventListener("submit", () => {
 
 function readnextdata() {
   thisid = eval(nextid);
-  
+  button2.disabled = false;
+  button2.classList.remove("disabled");
+
   // new code test for special chapters
   isitspecial = thisid.isSpecial; // check if chapter has a special condition 
   if (isitspecial == 1) {
@@ -130,13 +134,25 @@ function doSpecial() {
   case 100:
     timetracker.innerHTML = ""; 
     invlist.innerHTML = "Inventory: ";
+    button2.innerHTML = "";
+    button2.disabled = true;
+    button2.classList.add("disabled");
     break;
 
   case 102:
     lighter = 1;
     invlist.innerHTML += " lighter,";
+    button2.innerHTML = "";
+    button2.disabled = true;
+    button2.classList.add("disabled");
     break;
 
+  case 104:
+    button2.innerHTML = "";
+    button2.disabled = true;
+    button2.classList.add("disabled");
+    break;
+    
   case 108:
     option1 = data111;
     if (key) {
@@ -162,11 +178,23 @@ function doSpecial() {
     }
     break;
 
-  case 114:
+    case 112:
+      button2.innerHTML = "";
+      button2.classList.add("disabled");
+      button2.disabled = true;
+      break;
+      
+      
+    case 114:
+      button2.innerHTML = "";
+      button2.classList.add("disabled");
+      button2.disabled = true;
     if (candle) {
       if (lighter) {
         option2 = data115;
         button2.innerHTML = "Light the candle";
+        button2.disabled = false;
+        button2.classList.remove("disabled");
       }
     }
     break;
@@ -207,6 +235,9 @@ function doSpecial() {
     
     case 126:
       invlist.innerHTML = "";
+      button2.innerHTML = "";
+      button2.disabled = true;
+      button2.classList.add("disabled");
       break;
     
     case 127:
@@ -214,8 +245,16 @@ function doSpecial() {
       getTimeElapsed();
       let text = (hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
       timetracker.textContent = ("You completed this game in: " + text);
+      button2.innerHTML = "";
+      button2.disabled = true;
+      button2.classList.add("disabled");
       break;
 
+    case 130:
+      button2.innerHTML = "";
+      button2.disabled = true;
+      button2.classList.add("disabled");
+      break;
 
 
 
