@@ -33,12 +33,14 @@ function readinitialdata() {
   thistext = thisid.text;
   console.log(thisid);
   chapter.innerHTML = thistext;
+  invlist.innerHTML = "Inventory: ";
   option1 = thisid.optionkey1;
   option2 = thisid.optionkey2;
   button1.innerHTML = thisid.button1txt;
   button2.innerHTML = thisid.button2txt;
   myimage = thisid.image;
   chapterimage.src = "images\/" + myimage;
+  chapterimage.alt = thisid.imagealt;
 }
 
 // button selector
@@ -90,7 +92,8 @@ function readnextdata() {
   button2.innerHTML = thisid.button2txt;
   myimage = thisid.image;
   chapterimage.src = "images\/" + myimage;
-  } // remove this curly bracket if getting rid of special chapters code
+  chapterimage.alt = thisid.imagealt;  
+} // remove this curly bracket if getting rid of special chapters code
 
 }
 
@@ -104,6 +107,10 @@ function doSpecial() {
   option2 = thisid.optionkey2;
   button1.innerHTML = thisid.button1txt;
   button2.innerHTML = thisid.button2txt;
+  chapter.innerHTML = thistext;
+  myimage = thisid.image;
+  chapterimage.src = "images\/" + myimage;
+  chapterimage.alt = thisid.imagealt;
 
   switch(checkid) {
 
@@ -118,10 +125,16 @@ function doSpecial() {
         option1 = data119;
     }
     break; */
+  
+
+  case 100:
+    timetracker.innerHTML = ""; 
+    invlist.innerHTML = "Inventory: ";
+    break;
 
   case 102:
     lighter = 1;
-    invlist.innerHTML += "<li>lighter</li>";
+    invlist.innerHTML += " lighter,";
     break;
 
   case 108:
@@ -129,13 +142,8 @@ function doSpecial() {
     if (key) {
       option1 = data112;
     }
-    break;
-
-  case 109: //!!!!!!!! not needed??
-    creature = 1;
-    invlist.innerHTML += "<li>creature</li>";
-    break;
-
+      break;
+    
   case 110: // check!!?
     option2 = data114;
     if (key) {
@@ -148,8 +156,10 @@ function doSpecial() {
     break;
 
   case 111: // check if the candle already exists first!!!
-    candle = 1;
-    invlist.innerHTML += "<li>candle</li>";
+    if (!candle) {
+        candle = 1;
+        invlist.innerHTML += " candle,";
+    }
     break;
 
   case 114:
@@ -180,7 +190,7 @@ function doSpecial() {
 
   case 117:
     key = 1;
-    invlist.innerHTML += "<li>key</li>";
+    invlist.innerHTML += " Monkey Key";
     break;
 
   case 120:
@@ -193,7 +203,18 @@ function doSpecial() {
     if (lighter) {
         option1 = data119;
     }
-    break; 
+      break; 
+    
+    case 126:
+      invlist.innerHTML = "";
+      break;
+    
+    case 127:
+      invlist.innerHTML = "";
+      getTimeElapsed();
+      let text = (hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
+      timetracker.textContent = ("You completed this game in: " + text);
+      break;
 
 
 
@@ -218,7 +239,5 @@ function doSpecial() {
     console.log("do nothing special");
   }
   
-  chapter.innerHTML = thistext;
-  myimage = thisid.image;
-  chapterimage.src = "images\/" + myimage;
+
 }
