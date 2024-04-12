@@ -262,11 +262,9 @@ function doSpecial() {
       break;
 
     case 138:
-      //button2.innerHTML = "";
-      //button2.classList.add("disabled");
-      //button2.disabled = true;
-      key = 1; // temp
-      invlist.innerHTML += "key"; // temp
+      button2.innerHTML = "";
+      button2.classList.add("disabled");
+      button2.disabled = true;
       createPuzzle();
       break;
 
@@ -278,18 +276,79 @@ function doSpecial() {
 
 function createPuzzle() {
   console.log("puzzletime!"); // puzzlebox is the element
-
+  button1.addEventListener("click", () => {
+    puzzlebox.innerHTML = "";
+    readnextdata();
+  })
   //createform and inputs
-  let puzzleform = createElement("form");
-  let slot1 = createElement("input");
-  let slot2 = createElement("input");
-  let slot3 = createElement("input");
-  let puzzlesubmit = createElement("input");
+  let puzzleform = document.createElement("form");
+  let slot1 = document.createElement("input");
+  let slot2 = document.createElement("input");
+  let slot3 = document.createElement("input");
+  let puzzlesubmit = document.createElement("input");
 
   //Set attributes
+  puzzleform.setAttribute("onSubmit", "return false");
+  slot1.setAttribute("type", "text");
+  slot2.setAttribute("type", "text");
+  slot3.setAttribute("type", "text");
+  slot1.setAttribute("maxlength", "1");
+  slot2.setAttribute("maxlength", "1");
+  slot3.setAttribute("maxlength", "1");
+  slot1.setAttribute("name", "input1");
+  slot2.setAttribute("name", "input2");
+  slot3.setAttribute("name", "input3"); 
+  puzzlesubmit.setAttribute("class", "submitInput");
+  puzzlesubmit.setAttribute("value", "Submit");
+  puzzlesubmit.setAttribute("type", "submit");
 
+  //Append elements to form and form to div
+  puzzleform.appendChild(slot1);
+  puzzleform.appendChild(slot2);
+  puzzleform.appendChild(slot3);
+  puzzleform.appendChild(puzzlesubmit);
+  puzzlebox.appendChild(puzzleform);
 
-  
+  // add an event listener to the form
+  puzzlesubmit.addEventListener("click", () => {
+    console.log("checkpin");
 
+    //Create checker variables
+    let playerslot1 = 0;
+    let playerslot2 = 0;
+    let playerslot3 = 0;
+    let puzzlecorrect = 0;
 
+    //Check if the values are correct
+    if ((slot1.value == "l") || (slot1.value == "L")) {
+      playerslot1 = 1;
+    }
+
+    if ((slot2.value == "i") || (slot2.value == "I")) {
+      playerslot2 = 1;
+    }
+
+    if ((slot3.value == "t") || (slot3.value == "T")) {
+      playerslot3 = 1;
+    }
+
+    //check if all three values are correct
+    if ((playerslot1 == 1) && (playerslot2 == 1) && (playerslot3 == 1)) {
+      puzzlecorrect = 1;
+      console.log("Puzzle solved");
+    }
+    else {
+      console.log("puzzle failed");
+    }
+     
+    // If the puzzle is solved, remove it and go to the next chapter data117
+    if (puzzlecorrect == 1) {
+      puzzlebox.innerHTML = "";
+      nextid = data117;
+      readnextdata();
+    }
+    else { // reset puzzle if it is not solved
+      chapter.innerHTML = "Enter three characters in the boxes below: <br>Incorrect, try again?";
+    }
+  });
 }

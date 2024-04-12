@@ -1,5 +1,5 @@
 // store all story cards here
-
+//change var to const
 var data100 = {
   id: "data100",
   text: "You have been driving your truck for hours, and you feel your eyelids getting heavy. Suddenly something dashes into the road and in a panic, you spin your wheel and swerve... and everything goes black. ", 
@@ -315,7 +315,7 @@ var data125= {
   imagealt: "The protagonist looks down past their red plaid shirt and shoes as they fall into a dark void.",
   optionkey1: "data126",
   optionkey2: "data126",
-  button1txt: "Game Over",
+  button1txt: "Continue",
   button2txt: "",
   isSpecial: "1",
   addtext: "",
