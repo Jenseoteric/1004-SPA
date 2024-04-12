@@ -25,7 +25,7 @@ var data101 = {
   button2txt: "Follow the trail of mysterious liquid",
   isSpecial: "1",
   addtext: "",
-  notefordev: "opt1 nolighter +nokey = data102 or nolighter +yeskey = data119; opt1 yeslighter+yeskey = data108; opt2 = data103"
+  notefordev: "if lighter then optionkey1 = data119"
 }
 
 var data102 = {
@@ -76,7 +76,7 @@ var data105 = {
   image: "clearing.jpg", 
   imagealt: "The night sky lights up a grassy clearing in a forest. The horizon is filled with trees and hills.",
   optionkey1: "data106",
-  optionkey2: "data101",
+  optionkey2: "data120",
   button1txt: "Go to the clearing",
   button2txt: "Go back to the wreckage",
   isSpecial: "",
@@ -121,12 +121,10 @@ var data108 = {
   optionkey2: "data120",
   button1txt: "Examine the door",
   button2txt: "Go back to your truck",
-  isSpecial: "1",
+  isSpecial: "",
   addtext: "",
-  notefordev: "op1 nokey=data111, yeskey=data112; opt2 data101"
+  notefordev: ""
 }
-
-
 
 var data109 = {
   id: "data109",
@@ -151,9 +149,9 @@ var data110 = {
   optionkey2: "data114",
   button1txt: "Go back outside",
   button2txt: "Open the other door.",
-  isSpecial: "1",
+  isSpecial: "",
   addtext: "",
-  notefordev: "opt1 yeskey yescreature = data118, yeskey nocreature = data109; opt2 yeskey = data113, nokey = data114"
+  notefordev: ""
 }
 
 var data111 = {
@@ -170,46 +168,18 @@ var data111 = {
   notefordev: "inv+ candle"
 }
 
-var data112 = {
-  id: "data112",
-  text: "You scramble for your key, and as you twist the key into the door, you hear a satisfying loud thud within the door, and as you open it, this mystical blue light eminates from the door, as you see this fantastic sight, you run around to look at the back of the door, only to see the regular scenery through the open door. As you go back to the front of the door, you take a deep breath as if you were to take a dive into water, and you walk into the sparkling light of this magic door.", 
-  image: "magicdoor.jpg", 
-  imagealt: "The protagonist is wearing a red plaid shirt and opening a wooden door which stands mysteriously alone in a forest. Bright, shimmering light emanates from the doorway.",
-  optionkey1: "data112",
-  optionkey2: "data112",
-  button1txt: "You have completed this level",
-  button2txt: "",
-  isSpecial: "1",
-  addtext: "",
-  notefordev: "disable option2 button"
-}
-
-var data113 = {
-  id: "data113",
-  text: "The light from the candle reveals an ordinary room, however you are shocked by the sound of stone turning and scraping as in front of you a secret hatch reveals itself and begins to open.", 
-  image: "hatchopen.jpg", 
-  imagealt: "A hand holding a lit candle in a wooden cabin bedroom. There is a hatch above the bed which is open, revealing a set of stairs.",
-  optionkey1: "data116",
-  optionkey2: "data136",
-  button1txt: "Go through the hatch",
-  button2txt: "Go to the main room",
-  isSpecial: "",
-  addtext: "",
-  notefordev: ""
-}
-
 var data114 = {
   id: "data114",
   text: "The door leads to another room, but it is pitch black, and you cannot make out any detail. You are overwhelmed with a sharp sense of nyctophobia, and you fearfully wonder if there might be something here watching you.", 
   image: "darkbedroom.jpg", 
   imagealt: "A question mark engraved in wood.",
   optionkey1: "data136",
-  optionkey2: "data136",
+  optionkey2: "data115",
   button1txt: "Go to the main room",
-  button2txt: "Go to the main room",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
-  notefordev: "opt1 yescandle+lighter or nocandle+lighter = data, opt2 yescandle+lighter = data115 or nocandle+lighter = grey out"
+  notefordev: "opt2 yescandle+lighter = data115, or nocandle+lighter = disable"
 }
 
 var data115 = {
@@ -223,7 +193,7 @@ var data115 = {
   button2txt: "Go through the hatch",
   isSpecial: "1",
   addtext: "",
-  notefordev: "opt1 yeskey and nokey = data113, opt2 nokey only = data116 or grey out"
+  notefordev: "set lit +1; option2 if key then disable"
 }
 
 var data116 = {
@@ -232,7 +202,7 @@ var data116 = {
   image: "monkeypuzzle.jpg", 
   imagealt: "A statue of a monkey holding it's hands together, stood on a plynth which is adorned with puzzling engravings.",
   optionkey1: "data136",
-  optionkey2: "data117",
+  optionkey2: "data138",
   button1txt: "Go back to the main room",
   button2txt: "Try to break the combination",
   isSpecial: "1",
@@ -248,23 +218,10 @@ var data117 = {
   optionkey1: "data121",
   optionkey2: "data121",
   button1txt: "Go back to the bedroom",
-  button2txt: "Go back to the bedroom",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "+key in inventory, disable option2 button"
-}
-
-var data118 = {
-  id: "data118",
-  text: "", 
-  image: "", 
-  optionkey1: "data106",
-  optionkey2: "data106",
-  button1txt: "Go to the clearing",
-  button2txt: "Go to the clearing",
-  isSpecial: "1",
-  addtext: "",
-  notefordev: "disable second option button"
 }
 
 var data119 = {
@@ -275,7 +232,7 @@ var data119 = {
   optionkey1: "data103",
   optionkey2: "data103",
   button1txt: "Follow the trail of mysterious liquid",
-  button2txt: "Follow the trail of mysterious liquid",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "disable second option button"
@@ -292,7 +249,7 @@ var data120 = {
   button2txt: "Follow the trail of mysterious liquid",
   isSpecial: "1",
   addtext: "",
-  notefordev: "opt1 nolighter +nokey = data102 or nolighter +yeskey = data119; opt1 yeslighter+yeskey = data108; opt2 = data103"
+  notefordev: "if lighter then option1 = data119"
 }
 
 var data121 = {
@@ -331,7 +288,7 @@ var data123= {
   optionkey1: "data109",
   optionkey2: "data109",
   button1txt: "Leave the cabin",
-  button2txt: "Leave the cabin",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "disable second option button"
@@ -359,7 +316,7 @@ var data125= {
   optionkey1: "data126",
   optionkey2: "data126",
   button1txt: "Game Over",
-  button2txt: "Game Over",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "disable second option button"
@@ -392,34 +349,7 @@ var data127 = {
   addtext: "",
   notefordev: ""
 }
-/*
-var data126 = {
-  id: "data126",
-  text: "Where do you go to hide?",
-  image: "", 
-  optionkey1: "data128",
-  optionkey2: "data129",
-  button1txt: "In the grass",
-  button2txt: "Inside the cabin",
-  isSpecial: "1",
-  addtext: "",
-  notefordev: "creature encounter! nothing set yet"
-}
-*/
 
-/* var data128 = {
-  id: "data128",
-  text: "You scatter to the  side of the cabin and lay down flat in the longest grass you can find. As the man approaches the cabin",
-  image: "", 
-  optionkey1: "data128",
-  optionkey2: "data129",
-  button1txt: "In the grass",
-  button2txt: "Inside the cabin",
-  isSpecial: "1",
-  addtext: "",
-  notefordev: "creature encounter! nothing set yet"
-}
-*/
  var data130 = {
   id: "data130",
   text: "You sprint past the beast, towards the path from where you came, hearing the thud of footsteps as the beast turns to pursue you. You try to push yourself faster and faster, but there is no escape. It's sharp claws capture your shoulders, and you are seized off the ground, and dragged away... to be eaten.",
@@ -434,7 +364,6 @@ var data126 = {
   notefordev: "disable second option button"
 }
 
-
 var data131 = {
   id: "data131",
   text: "You notice a hefty rock placed on the fence just to right, the beast suddenly lunges at you, in a terrified panic, you reach over for the boulder with both hands and smack the beast's strange headpiece. An ear splitting *CLANG* sounds and echoes from the forest around you, the monster clasps it's face with it's hands, giving you a moment to escape.",
@@ -443,7 +372,7 @@ var data131 = {
   optionkey1: "data132",
   optionkey2: "data132",
   button1txt: "Continue",
-  button2txt: "Continue",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "disable second option button"
@@ -468,10 +397,10 @@ var data133 = {
   text: "You commit to running down the path that goes down towards the road, and as you make it to the concrete of the highway, unsure what to do, you remember the door you had seen earlier, and are compelled to try to unlock it with the key you found from the Monkey statue. As the key fits in the lock, a fantastic light eminates from the cracks of the door, as you swing it open, you see that it is a magical portal. As you hesitate to enter the unknown inside of the door, you hear the beast has your trail, and will catch you soon, so you are left with no choice.",
   image: "magicdoor.jpg", 
   imagealt: "The protagonist is opening a wooden door, and a bright, shimmering light is emanating from the open door.",
-  optionkey1: "data126",
-  optionkey2: "data126",
+  optionkey1: "data127",
+  optionkey2: "data127",
   button1txt: "End of chapter 1",
-  button2txt: "End of chapter 1",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "disable second option button"
@@ -484,21 +413,8 @@ var data134 = {
   imagealt: "The words GAME OVER are displayed alongside an image of a wrecked truck lying across a forest road.",
   optionkey1: "data126",
   optionkey2: "data126",
-  button1txt: "Game Over",
-  button2txt: "Game Over",
-  isSpecial: "1",
-  addtext: "",
-  notefordev: "disable second option button"
-}
-
-var data135 = {
-  id: "data135",
-  text: "As you open the cabin door, you feel the contrast of the night breeze against the thick humidity and dust that was present in the cabin. You take a look around, and notice a terrifying beast staring at you from a branch from above. As you step outside, just as you are about to inhale the fresh air, you see something moving on the path you came from recently, you take a second to focus on it and figure out what it is, and you realise it is a man walking towards the cabin door! ... But the man looks extremely strange, not like anything you've seen before, and it seems to be holding a large tool or weapon, limping and wearing a strange contraption on it's head. You feel very wary of this man, and it looks to be quite dangerous.",
-  image: "", 
-  optionkey1: "data126",
-  optionkey2: "data126",
-  button1txt: "Game Over",
-  button2txt: "Game Over",
+  button1txt: "Continue",
+  button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "disable second option button"
@@ -513,9 +429,9 @@ var data136 = {
   optionkey2: "data114",
   button1txt: "Go back outside",
   button2txt: "Go back to the bedroom.",
-  isSpecial: "",
+  isSpecial: "1",
   addtext: "",
-  notefordev: ""
+  notefordev: "if candle is lit then option2 = data115"
 }
 
 var data137 = {
@@ -532,4 +448,16 @@ var data137 = {
   notefordev: ""
 }
 
-
+var data138 = {
+  id: "data138",
+  text: "Enter three characters in the boxes below: ",
+  image: "monkeypuzzle.jpg",
+  imagealt: "A statue of a monkey holding it's hands together, stood on a plynth which is adorned with puzzling engravings.",
+  optionkey1: "data136",
+  optionkey2: "data121",
+  button1txt: "Go back to the main room",
+  button2txt: "solve the puzzle",
+  isSpecial: "1",
+  addtext: "",
+  notefordev: "This is the puzzle"
+}
