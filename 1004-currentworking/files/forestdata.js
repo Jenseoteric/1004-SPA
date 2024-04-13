@@ -14,7 +14,7 @@ var data100 = {
   notefordev: "disable option2"
 }
 
-var data101 = {
+const data101 = {
   id: "data101",
   text: "An unknown amount of time later, you wake up surrounded by the brutal wreck of your truck. You are in a state of shock and delirium, but the sight of a trail of orange liquid catches your eye.", 
   image: "truckwreck.jpg",
@@ -22,27 +22,27 @@ var data101 = {
   optionkey1: "data102",
   optionkey2: "data103",
   button1txt: "Search the wreckage",
-  button2txt: "Follow the trail of mysterious liquid",
+  button2txt: "Follow the trail",
   isSpecial: "1",
   addtext: "",
   notefordev: "if lighter then optionkey1 = data119"
 }
 
-var data102 = {
+const data102 = {
   id: "data102",
   text: "You find your phone but it is irreparably damaged. However, elsewhere in the glove compartment you find a lighter, which you figure may be useful in the future.", 
   image: "findlighter.jpg", 
   imagealt: "The protagonist's hand, wearing a red plaid shirt, searches a glove compartment and finds a broken phone and a cigarette lighter.",
   optionkey1: "data103",
   optionkey2: "data103",
-  button1txt: "Follow the trail of mysterious liquid",
+  button1txt: "Follow the trail",
   button2txt: "",
   isSpecial: "1",
   addtext: "",
   notefordev: "inv+ lighter, inv+ Broken Phone, disable option2"
 }
 
-var data103 = {
+const data103 = {
   id: "data103",
   text: "You nervously follow the orange trail uphill, feeling extremely vulnerable as you make your way through the trees. The trail stops at a wild block of foliage, its' leaves smeared and splattered with the orange fluid.", 
   image: "foliagetrail.jpg", 
@@ -56,7 +56,7 @@ var data103 = {
   notefordev: ""
 }
 
-var data104 = {
+const data104 = {
   id: "data104",
   text: "Hidden behind the foliage is a boulder lit with two candles. The letter \"I\" has been eerily engraved on its surface. ", 
   image: "boulder.jpg", 
@@ -204,7 +204,7 @@ var data116 = {
   optionkey1: "data136",
   optionkey2: "data138",
   button1txt: "Go back to the main room",
-  button2txt: "Try to break the combination",
+  button2txt: "Break the combination",
   isSpecial: "1",
   addtext: "",
   notefordev: "puzzle! opt1 solved = data117, opt2 quit = data115"
@@ -231,7 +231,7 @@ var data119 = {
   imagealt: "The protagonist's hand, wearing a red plaid shirt, searches a glove compartment and finds a broken phone and a cigarette lighter.",
   optionkey1: "data103",
   optionkey2: "data103",
-  button1txt: "Follow the trail of mysterious liquid",
+  button1txt: "Follow the trail",
   button2txt: "",
   isSpecial: "1",
   addtext: "",
@@ -246,7 +246,7 @@ var data120 = {
   optionkey1: "data102",
   optionkey2: "data103",
   button1txt: "Search the wreckage",
-  button2txt: "Follow the trail of mysterious liquid",
+  button2txt: "Follow the trail",
   isSpecial: "1",
   addtext: "",
   notefordev: "if lighter then option1 = data119"
@@ -273,8 +273,8 @@ var data122 = {
   imagealt: "The interior of a decrepit wooden cabin. A strangely ornate door stands out against the broken wood walls.",
   optionkey1: "data124",
   optionkey2: "data123",
-  button1txt: "Unlock the door with the Monkey Key",
-  button2txt: "Give up and continue to main room",
+  button1txt: "Try the Monkey Key",
+  button2txt: "Give up and go to main room",
   isSpecial: "",
   addtext: "",
   notefordev: ""
@@ -301,7 +301,7 @@ var data124= {
   imagealt: "A burst of red and purple electrical energy.",
   optionkey1: "data125",
   optionkey2: "data123",
-  button1txt: "Attempt to force the door open by bashing it down",
+  button1txt: "Force the door open",
   button2txt: "Return to main room",
   isSpecial: "",
   addtext: "",
@@ -386,7 +386,7 @@ var data132 = {
   optionkey1: "data134",
   optionkey2: "data133",
   button1txt: "Run to the clearing",
-  button2txt: "Run through the Gravel Path",
+  button2txt: "Run down the gravel path",
   isSpecial: "",
   addtext: "",
   notefordev: ""
@@ -399,7 +399,7 @@ var data133 = {
   imagealt: "The protagonist is opening a wooden door, and a bright, shimmering light is emanating from the open door.",
   optionkey1: "data127",
   optionkey2: "data127",
-  button1txt: "End of chapter 1",
+  button1txt: "Continue",
   button2txt: "",
   isSpecial: "1",
   addtext: "",

@@ -63,14 +63,14 @@ button2.addEventListener("click", () => {
 //
 //
 //cheatcode section
-var cheatform = document.getElementById("cheatform");
+/*var cheatform = document.getElementById("cheatform");
 console.log(cheatform);
 cheatform.addEventListener("submit", () => {
    var cheatcode = document.getElementById("cheatcode").value;
    console.log(cheatcode);
    nextid = eval(cheatcode); // ?????
    readnextdata();
-})
+})*/
 
 // load story chapters
 
@@ -118,6 +118,10 @@ function doSpecial() {
       button2.innerHTML = "";
       button2.disabled = true;
       button2.classList.add("disabled");
+      candle = 0; // reset variables
+      lighter = 0;
+      lit = 0;
+      key = 0;
       break;
 
     case 101:
@@ -187,7 +191,7 @@ function doSpecial() {
       button2.classList.add("disabled");
       button2.disabled = true;
       key = 1;
-      invlist.innerHTML += " Monkey Key";
+      invlist.innerHTML = "Inventory: Monkey Key";
       break;
 
     case 119:
@@ -247,6 +251,7 @@ function doSpecial() {
       button2.innerHTML = "";
       button2.classList.add("disabled");
       button2.disabled = true;
+      invlist.innerHTML = "";
       break;
     
     case 134:
@@ -276,10 +281,15 @@ function doSpecial() {
 
 function createPuzzle() {
   console.log("puzzletime!"); // puzzlebox is the element
+  
   button1.addEventListener("click", () => {
     puzzlebox.innerHTML = "";
     readnextdata();
   })
+  
+  // remove inventory element
+  invlist.innerHTML = "";
+
   //createform and inputs
   let puzzleform = document.createElement("form");
   let slot1 = document.createElement("input");
@@ -298,8 +308,11 @@ function createPuzzle() {
   slot1.setAttribute("name", "input1");
   slot2.setAttribute("name", "input2");
   slot3.setAttribute("name", "input3"); 
+  slot1.setAttribute("class", "pinInput");
+  slot2.setAttribute("class", "pinInput");
+  slot3.setAttribute("class", "pinInput");
   puzzlesubmit.setAttribute("class", "submitInput");
-  puzzlesubmit.setAttribute("value", "Submit");
+  puzzlesubmit.setAttribute("value", "Confirm");
   puzzlesubmit.setAttribute("type", "submit");
 
   //Append elements to form and form to div

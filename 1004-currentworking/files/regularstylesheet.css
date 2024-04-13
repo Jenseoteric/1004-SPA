@@ -5,7 +5,7 @@
 
 @media (prefers-color-scheme: dark) { /* alt color scheme for dark browser settings */
 	:root {
-		background-color: #724A3F;
+		background-color: #2b2124;
 		color: rgb(226, 222, 205);
 	}
 }
@@ -30,12 +30,18 @@ img {
 	max-width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
+	border-color: #2b2124;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 5px;
 }
 
 p {
 	font-family: Helvetica, sans-serif;
 	font-size: 16px;
-	line-height: 150%;
+	line-height: 150%; /* for accessibility */
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 button { /* defines default button */
@@ -50,16 +56,21 @@ button { /* defines default button */
 .main_content {
 	min-height: 100%; /* to ensure div expands vertically */
 	min-height: 100vh;
-	width: 75%;
+	width: 76%;
 	margin: auto; /* centers container */
 	background-color: #ede6d1;
+	border-color: #2b2124;	
+	border-style: solid;
+	border-width: 4px;
+	border-radius: 25px;
 	overflow: auto; /* div background colour will fill page vertically, adds auto scrollbar */
 	justify-content: start; /* ??? */
 }
 
 @media (prefers-color-scheme: dark) {
 	.main_content {
-		background-color: #004850;		
+		background-color: #004850;	
+		border-color: #ede6d1;	
 	}
 }
 
@@ -73,7 +84,7 @@ button { /* defines default button */
     display: flex;    
     flex-wrap: nowrap;
     flex-direction: column;
-    row-gap: 10px; /* gap between items */ 
+    row-gap: 0px; /* gap between items */ 
 }
 
 /* responsive sizes for different viewports */
@@ -82,29 +93,62 @@ reference: common phone sizes 360x800, 390x844, 414x896
 reference: common tablet sizes 1280x800, 1024x768 - this will be default size
 reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 
-@media (max-width: 450px) { /* for mobile phones, check sizes! */
-	p {
-		font-size: 14px;
+@media (max-width: 450px) { 
+	img {
+		max-height: 95%; /* with flex image will resize to fit */
+		max-width: 95%;
 	}
+
+	p {
+		font-size: 16px;
+	}
+
 	.main_content {
 		width: 80%;
 	}
+
 	.flex_container {
-		padding-top: 10%;
-		padding-bottom: 10%;
 		width: 90%;
 		max-height: 800px;
 	}
 }
 
-@media (min-width: 1440px) { /* for desktops, check sizes! */
+@media (min-width: 451px) and (max-width: 1279px) {
+	img {
+		max-height: 95%;
+		max-width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	.main_content {
+		width: 85%;
+	}
+
+	.flex_container {
+		width: 90%;
+	}
+}
+
+@media (min-width: 1280px) { /* for desktops, check sizes! */
+	img {
+		max-height: 100%;/* with flex image will resize to fit */
+		max-width: 100%;
+	}
+	
 	p {
 		font-size: 18px;
 	}
+
 	.main_content {
 		min-width: 1070px;
 		width: 65%;
 	}
+
 	.flex_container {
 		width: 900px;
 		max-height: 900px;
@@ -114,14 +158,24 @@ reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 .flex_container > .image_box {
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 2px;
+}
+
+@media (min-width: 451px) and (max-width: 1279px) {
+	.image_box {
+		max-width: 90%;
+		max-height: 90%;
+	}
 }
 
 .flex_container > .text_box {
 	flex: 1;
+	row-gap: 5px;
 }
 
 .flex_container > .text_box > .inv {
 	font-style: italic;
+	font-size: 14px;
 }
 
 .flex_container > .activity_box {
@@ -138,14 +192,25 @@ reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 	width: 47%;
 	height: 60%;
 	background-color: #968884;
-	padding: 10px 10px;
-	text-align: left;
-	vertical-align: top;
+	padding: 6px 6px;
+	text-align: center;
+	vertical-align: top;	
 }
 
 .flex_container > .activity_box > .optionbutton:hover { /* tells user the button is interactive */
 	background-color: #8a7a75;
 	box-shadow: -3px 3px #666;
+}
+
+@media (prefers-color-scheme: dark) {
+	.flex_container > .activity_box > .optionbutton {
+		background-color: #a8b6ab;
+	}
+	.flex_container>.activity_box>.optionbutton:hover {
+		/* tells user the button is interactive */
+		background-color: #707972;
+		box-shadow: -3px 3px #666;
+	}
 }
 
 .disabled {
@@ -154,6 +219,40 @@ reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 }
 
 .submitInput {
-
-
+	width: 120px;
+	padding: 15px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #d0c5bd;
+	margin-top: 5px;
+	color: black;	
 }
+
+.pinInput {
+	width: 40px;
+	padding: 15px;
+	font-size: 20px;
+	margin: 3px;
+	background-color: #eef6f5;
+	text-align: center;
+}
+
+.pinInput:focus {
+	background-color: #dbd2cc;
+}
+
+@media (prefers-color-scheme: dark) {
+	.pinInput {
+		background-color: #3b3b3b;
+		border-color: #e0f3ef;
+	}
+
+	.pinInput:focus {
+		background-color: #222222;
+	}
+
+	.submitInput {
+		background-color: #e0f3ef;
+	}
+}
+
