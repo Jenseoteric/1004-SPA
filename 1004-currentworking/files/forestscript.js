@@ -20,8 +20,6 @@ let lighter; // inventory item
 let candle; // inventory item
 let lit; // triggered by lighting the candle
 let addtext;
-let solved;
-let creature;
 
 // load all scripts when ready
 document.addEventListener("DOMContentLoaded", function() {
@@ -178,14 +176,6 @@ function doSpecial() {
       }
       break;
   
-    case 116: // sort out
-      var solved = 0;
-      if (solved) {
-        option1 = data117;
-        button1.innerHTML = "Solve the puzzle";
-      }
-      break;
-
     case 117:
       button2.innerHTML = "";
       button2.classList.add("disabled");

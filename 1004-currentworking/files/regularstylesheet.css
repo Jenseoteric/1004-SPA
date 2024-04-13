@@ -197,19 +197,44 @@ reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 	vertical-align: top;	
 }
 
-.flex_container > .activity_box > .optionbutton:hover { /* tells user the button is interactive */
-	background-color: #8a7a75;
-	box-shadow: -3px 3px #666;
+@media (hover : hover) {
+	.flex_container > .activity_box > .optionbutton:hover { /* tells user the button is interactive on desktop devices */
+		background-color: #8a7a75;
+		box-shadow: -3px 3px #666;
+	}
+}
+
+@media (hover : none) {
+	.flex_container>.activity_box>.optionbutton:hover {/* turn off hover on mobile devices */
+		background-color: #968884;
+		box-shadow: 0px 0px #968884;
+	}
+
+	.flex_container > .activity_box > .optionbutton:active { /* add press animation on click instead */
+		transform: translateY(2px);
+	}
 }
 
 @media (prefers-color-scheme: dark) {
 	.flex_container > .activity_box > .optionbutton {
 		background-color: #a8b6ab;
 	}
-	.flex_container>.activity_box>.optionbutton:hover {
-		/* tells user the button is interactive */
-		background-color: #707972;
-		box-shadow: -3px 3px #666;
+
+	@media (hover : hover) { 
+		.flex_container>.activity_box>.optionbutton:hover { /* tells user the button is interactive on desktop devices */
+			background-color: #707972;
+			box-shadow: -3px 3px #666;
+		}
+	}
+	
+	@media (hover : none) { /* turn off hover for mobile devices */
+		.flex_container>.activity_box>.optionbutton:hover {
+			background-color: #a8b6ab;
+			box-shadow: 0px 0px #a8b6ab;
+		}
+		.flex_container > .activity_box > .optionbutton:active { /* add press animation on click instead */
+			transform: translateY(2px);
+		}
 	}
 }
 

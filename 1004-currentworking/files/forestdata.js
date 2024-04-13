@@ -1,6 +1,6 @@
 // store all story cards here
 //change var to const
-var data100 = {
+const data100 = {
   id: "data100",
   text: "You have been driving your truck for hours, and you feel your eyelids getting heavy. Suddenly something dashes into the road and in a panic, you spin your wheel and swerve... and everything goes black. ", 
   image: "start.jpg",
@@ -70,7 +70,7 @@ const data104 = {
   notefordev: "disable option2"
 }
 
-var data105 = {
+const data105 = {
   id: "data105",
   text: "You continue to hike through the woods until you reach the top of the hill. The forest glows with moonlight, but you find yourself feeling hopeless as the treetops seem to stretch out forever. As you search for any sign of hope, you notice a clearing amongst the trees.", 
   image: "clearing.jpg", 
@@ -84,7 +84,7 @@ var data105 = {
   notefordev: ""
 }
 
-var data106 = {
+const data106 = {
   id: "data106",
   text: "The clearing is lit with three candles, and you find more of the orange luminescent fluid pooling inside the character \"T\" which has been etched into the ground. Ahead are two paths, one a is winding, forested path, the other path is paved with gravel.", 
   image: "threecandles.png", 
@@ -98,7 +98,7 @@ var data106 = {
   notefordev: ""
 }
 
-var data107 = {
+const data107 = {
   id: "data107",
   text: "You decide to walk down the forest path, but soon you begin to doubt your decision as the trees canopy overhead blocks out all moonlight. Just as you are losing hope, you stumble out of the undergrowth. Not too far ahead of you is a cabin. The windows are as dark as the night sky, and there are no signs of life within.", 
   image: "cabinoutside.jpg",
@@ -112,7 +112,7 @@ var data107 = {
   notefordev: ""
 }
 
-var data108 = {
+const data108 = {
   id: "data108",
   text: "You take the gravel path, and before long you find yourself back on the highway. Squinting into the distance you see the disaster that was once your truck, and you lament about how long it took you to afford it. As you turn your head a bizarre sight catches your eye on the opposite side of the road. Impossibly, a heavy wooden door stands alone amongst the trees.", 
   image: "mysterydoor.jpg", 
@@ -126,7 +126,7 @@ var data108 = {
   notefordev: ""
 }
 
-var data109 = {
+const data109 = {
   id: "data109",
   text: "As you step outside, ready to inhale the fresh night air, something moves in the darkness. It steps towards you revealing a creature with elongated limbs, sharp claws, and lizard-like eyes piercing you over the top of its evil grin. Despite its horrifying nature, it wears a comical contraption on its head, but you don't dare to laugh as the monster looks poised to pounce.",
   image: "monstercabin.jpg", 
@@ -140,7 +140,7 @@ var data109 = {
   notefordev: ""
 }
 
-var data110 = {
+const data110 = {
   id: "data110",
   text: "Nervously, you approach the cabin and push open the creaking rotten door. To your surprise a dim light flickers on automatically. You find yourself in a run down room with broken floorboards. It appears to be barely holding itself together. Curiously, a strange painting dominates one wall, depicting a boy holding a single lit candle, which illuminates the letter \"L\" in the corner of the portrait. There is another door here.", 
   image: "mainroom.jpg", 
@@ -154,7 +154,7 @@ var data110 = {
   notefordev: ""
 }
 
-var data111 = {
+const data111 = {
   id: "data111",
   text: "You inspect both sides of the door curiously. Although it couldn't possibly lead anywhere, you are compelled to try and open it anyway. Unfortunately, the door is locked, but you notice a candle holder nearby, and take the candle.", 
   image: "candleholder.jpg", 
@@ -168,7 +168,7 @@ var data111 = {
   notefordev: "inv+ candle"
 }
 
-var data114 = {
+const data114 = {
   id: "data114",
   text: "The door leads to another room, but it is pitch black, and you cannot make out any detail. You are overwhelmed with a sharp sense of nyctophobia, and you fearfully wonder if there might be something here watching you.", 
   image: "darkbedroom.jpg", 
@@ -182,7 +182,7 @@ var data114 = {
   notefordev: "opt2 yescandle+lighter = data115, or nocandle+lighter = disable"
 }
 
-var data115 = {
+const data115 = {
   id: "data115",
   text: "The light from the candle reveals some more detail about the room, and you are shocked by the sounds of stone turning and scraping across the floor as a secret hatch opens up in the ground on the other side of the room. ", 
   image: "hatchopen.jpg", 
@@ -196,7 +196,7 @@ var data115 = {
   notefordev: "set lit +1; option2 if key then disable"
 }
 
-var data116 = {
+const data116 = {
   id: "data116",
   text: "You crawl through the hatch and find an odd and eerie statue of a monkey. The plynth on which it stands appears to hold a three slot combination lock. Your journey tonight has been unfathomably strange and you consider turning your back on the statue and walking away, however...", 
   image: "monkeypuzzle.jpg", 
@@ -205,12 +205,12 @@ var data116 = {
   optionkey2: "data138",
   button1txt: "Go back to the main room",
   button2txt: "Break the combination",
-  isSpecial: "1",
+  isSpecial: "",
   addtext: "",
-  notefordev: "puzzle! opt1 solved = data117, opt2 quit = data115"
+  notefordev: ""
 }
 
-var data117 = {
+const data117 = {
   id: "data117",
   text: "Full of anticipation, you input the last letter, and the monkey's mouth gapes open, and within it holds a key.", 
   image: "monkeykey.jpg", 
@@ -224,7 +224,7 @@ var data117 = {
   notefordev: "+key in inventory, disable option2 button"
 }
 
-var data119 = {
+const data119 = {
   id: "data119",
   text: "You search for anything else you could possibly use from the wreckage, but you are left with nothing.", 
   image: "findlighter.jpg", 
@@ -238,7 +238,7 @@ var data119 = {
   notefordev: "disable second option button"
 }
 
-var data120 = {
+const data120 = {
   id: "data120",
   text: "You sigh deeply as you arrive back at the wreckage of your truck. Despite losing your truck, you know you are lucky to have survived the crash. You wonder again what could have left this otherworldly orange trail.", 
   image: "truckwreck.jpg", 
@@ -252,7 +252,7 @@ var data120 = {
   notefordev: "if lighter then option1 = data119"
 }
 
-var data121 = {
+const data121 = {
   id: "data121",
   text: "As you crawl out of the hatch with the Monkey themed puzzle, you look behind you, and to your surprise, where was a hole in the wall, is now just a flawless, flat continuation of the rotten wallpaper. You walk hastily back into the main room, but on the way, a door catches your eye, a door you're not sure was there when you came into the bedroom.",
   image: "closedhatchbedroom.jpg", 
@@ -266,7 +266,7 @@ var data121 = {
   notefordev: ""
 }
 
-var data122 = {
+const data122 = {
   id: "data122",
   text: "You take a few steps towards the door, and you place your hand upon the ornate round metal handle, but as you twist your wrist to push open the door, you notice that its locked shut.", 
   image: "strangedoor.jpg", 
@@ -280,7 +280,7 @@ var data122 = {
   notefordev: ""
 }
 
-var data123= {
+const data123= {
   id: "data123",
   text: "You return to the main room, and your eyes return to the painting on the wall of the boy with the candle, and your mind is filled with questions, like how is this possible, and who might have set this up?",
   image: "mainroom.jpg",
@@ -294,7 +294,7 @@ var data123= {
   notefordev: "disable second option button"
 }
 
-var data124= {
+const data124= {
   id: "data124",
   text: "You pull the Monkey Key from your pocket, and attempt to unlock the door with the key, but as you insert the key, you realise this key does not fit the lock. You get a sudden electric shock, and for whatever reason the words \"Use the key well, and you may find yourself here again in the future\" manifest in your mind.",
   image: "doormessage.jpg", 
@@ -308,7 +308,7 @@ var data124= {
   notefordev: ""
 }
 
-var data125= {
+const data125= {
   id: "data125",
   text: "In an act of frustration, you take a few steps back, and ram into the door to attempt to knock it off it\'s hinges, as you do this, the door collapses, and you fall into the room, only you never land on the ground, as you now find yourself free falling through a dank, seemingly endless space. You begin to lose consciousness, and the last thought you have is \"why would anyone build this room!?\"",
   image: "void.jpg", 
@@ -322,7 +322,7 @@ var data125= {
   notefordev: "disable second option button"
 }
 
-var data126 = {
+const data126 = {
   id: "data126",
   text: "GAME OVER! Just after dawn, a passerby finds the wreck of your truck. Local law enforcement begin to search the forest for you. Unfortunately, no trace of you is ever found.",
   image: "imgdata999.jpg", 
@@ -336,7 +336,7 @@ var data126 = {
   notefordev: ""
 }
 
-var data127 = {
+const data127 = {
   id: "data127",
   text: "Thanks for playing, you have reached the end of this game. Three hours after you pass through the magic door, your truck is found, and the local law enforcement begin to search the forest in hopes of finding you. They find absolutely nothing unusual.",
   image: "thanksforplaying.jpg", 
@@ -350,7 +350,7 @@ var data127 = {
   notefordev: ""
 }
 
- var data130 = {
+const data130 = {
   id: "data130",
   text: "You sprint past the beast, towards the path from where you came, hearing the thud of footsteps as the beast turns to pursue you. You try to push yourself faster and faster, but there is no escape. It's sharp claws capture your shoulders, and you are seized off the ground, and dragged away... to be eaten.",
   image: "monsterdeath2.jpg",
@@ -364,7 +364,7 @@ var data127 = {
   notefordev: "disable second option button"
 }
 
-var data131 = {
+const data131 = {
   id: "data131",
   text: "You notice a hefty rock placed on the fence just to right, the beast suddenly lunges at you, in a terrified panic, you reach over for the boulder with both hands and smack the beast's strange headpiece. An ear splitting *CLANG* sounds and echoes from the forest around you, the monster clasps it's face with it's hands, giving you a moment to escape.",
   image: "monsterbash.jpg", 
@@ -378,7 +378,7 @@ var data131 = {
   notefordev: "disable second option button"
 }
 
-var data132 = {
+const data132 = {
   id: "data132",
   text: "You run as fast as you can down the path for what feels like forever, and your body is aching with pain, you come across the divergence in the paths you came by earlier, you must think fast before the monster catches up to you",
   image: "2paths.png", 
@@ -392,7 +392,7 @@ var data132 = {
   notefordev: ""
 }
 
-var data133 = {
+const data133 = {
   id: "data133",
   text: "You commit to running down the path that goes down towards the road, and as you make it to the concrete of the highway, unsure what to do, you remember the door you had seen earlier, and are compelled to try to unlock it with the key you found from the Monkey statue. As the key fits in the lock, a fantastic light eminates from the cracks of the door, as you swing it open, you see that it is a magical portal. As you hesitate to enter the unknown inside of the door, you hear the beast has your trail, and will catch you soon, so you are left with no choice.",
   image: "magicdoor.jpg", 
@@ -406,7 +406,7 @@ var data133 = {
   notefordev: "disable second option button"
 }
 
-var data134 = {
+const data134 = {
   id: "data133",
   text: "You commit to running down the path that leads to the clearing, but you notice as you run uphill, that the beast is now catching up to you, and even if you reach the clearing, there is nowhere to hide.",
   image: "monsterdeath2.jpg", 
@@ -420,7 +420,7 @@ var data134 = {
   notefordev: "disable second option button"
 }
 
-var data136 = {
+const data136 = {
   id: "data136",
   text: "You return to the main room of the cabin, and your eyes return to the painting on the wall of the boy with the candle, and your mind is filled with questions, like how is this possible, and who might have set this up?",
   image: "mainroom.jpg",
@@ -434,7 +434,7 @@ var data136 = {
   notefordev: "if candle is lit then option2 = data115"
 }
 
-var data137 = {
+const data137 = {
   id: "data137",
   text: "As you leave the cabin, you are startled by the stark contrast of the crisp, night air to the dingy, decrepit atmosphere behind you. The night is pressing on, and you feel no closer to finding your way back to civilization. You wonder if you might have missed something on your search so far.",
   image: "cabinoutside.jpg", 
@@ -448,7 +448,7 @@ var data137 = {
   notefordev: ""
 }
 
-var data138 = {
+const data138 = {
   id: "data138",
   text: "Enter three characters in the boxes below: ",
   image: "monkeypuzzle.jpg",
