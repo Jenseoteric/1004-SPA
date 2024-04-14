@@ -88,14 +88,10 @@ button { /* defines default button */
 }
 
 /* responsive sizes for different viewports */
-/*CHECK THESE AGAIN!!
-reference: common phone sizes 360x800, 390x844, 414x896
-reference: common tablet sizes 1280x800, 1024x768 - this will be default size
-reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 
 @media (max-width: 450px) { 
 	img {
-		max-height: 95%; /* with flex image will resize to fit */
+		max-height: 95%; 
 		max-width: 95%;
 	}
 
@@ -134,9 +130,9 @@ reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 	}
 }
 
-@media (min-width: 1280px) { /* for desktops, check sizes! */
+@media (min-width: 1280px) { 
 	img {
-		max-height: 100%;/* with flex image will resize to fit */
+		max-height: 100%;
 		max-width: 100%;
 	}
 	
@@ -171,6 +167,12 @@ reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 .flex_container > .text_box {
 	flex: 1;
 	row-gap: 5px;
+}
+
+.flex_container > .text_box > .puzzlebox {
+	width: 360px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .flex_container > .text_box > .inv {
@@ -244,7 +246,7 @@ reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 }
 
 .submitInput {
-	width: 120px;
+	width: 110px;
 	padding: 15px;
 	font-size: 20px;
 	font-weight: bold;
@@ -254,7 +256,7 @@ reference: common desktop sizes 1920X1080, 1440X900, 1280X1024 */
 }
 
 .pinInput {
-	width: 40px;
+	width: 30px;
 	padding: 15px;
 	font-size: 20px;
 	margin: 3px;

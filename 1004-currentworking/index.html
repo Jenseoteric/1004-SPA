@@ -8,6 +8,8 @@
 	<meta charset="utf-8">
 	<title>Forest Mystery</title>
 	<link rel="stylesheet" href="files/regularstylesheet.css"> <!-- links to css sheet for this page -->
+	<link rel="icon" type="image/png/" sizes="32x32" href="burial_candle_cultures_flame_pray_icon.png" alt="Candle icon by Starup Graphic Design,
+	available from iconfinder.com/startupgraphicdesign and licenced as Free for commercial use"> <!-- load favicon to address bar -->
 </head>
 
 <body>
@@ -22,11 +24,13 @@
 		
 			<div class="text_box">
 				<p id="chapter"></p>
-				<div id="puzzlebox"></div>
+				<div id="puzzlebox" class="puzzlebox"></div>
 				<p id="inv" class="inv"></p>
 				<p id="timetracker"></p> 
 			</div>
-		<!--<form id="cheatform" onsubmit="return false"><label>Cheatcode</label><br><input type="text" id="cheatcode"></form> -->
+		    	<!-- DEV TOOLS - for use with cheatcode section of script 
+				<form id="cheatform" onsubmit="return false"><label>Cheatcode</label><br><input type="text" id="cheatcode"></form> 
+				-->
 			<div class="activity_box">
 				<button id="button1" class="optionbutton"></button>
 				<button id="button2" class="optionbutton"></button>
@@ -39,6 +43,5 @@
 
 <script src="files/forestscript.js"></script>
 <script src="files/forestdata.js"></script> 
-<script src="files/timerscript.js"></script> 
 
 </html>

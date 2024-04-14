@@ -1,5 +1,4 @@
 // store all story cards here
-//change var to const
 const data100 = {
   id: "data100",
   text: "You have been driving your truck for hours, and you feel your eyelids getting heavy. Suddenly something dashes into the road and in a panic, you spin your wheel and swerve... and everything goes black. ", 
@@ -18,14 +17,14 @@ const data101 = {
   id: "data101",
   text: "An unknown amount of time later, you wake up surrounded by the brutal wreck of your truck. You are in a state of shock and delirium, but the sight of a trail of orange liquid catches your eye.", 
   image: "truckwreck.jpg",
-  imagealt: "A highway in the middle of a dense forest at night, the wreckage of a truck is sprawled across the road.",
+  imagealt: "A highway in the middle of a dense forest at night, the wreckage of the truck is sprawled across the road.",
   optionkey1: "data102",
   optionkey2: "data103",
   button1txt: "Search the wreckage",
   button2txt: "Follow the trail",
-  isSpecial: "1",
+  isSpecial: "",
   addtext: "",
-  notefordev: "if lighter then optionkey1 = data119"
+  notefordev: ""
 }
 
 const data102 = {
@@ -39,7 +38,7 @@ const data102 = {
   button2txt: "",
   isSpecial: "1",
   addtext: "",
-  notefordev: "inv+ lighter, inv+ Broken Phone, disable option2"
+  notefordev: "inv+ lighter, disable option2"
 }
 
 const data103 = {
@@ -107,7 +106,7 @@ const data107 = {
   optionkey2: "data110",
   button1txt: "Go back to the clearing",
   button2txt: "Enter the cabin",
-  isSpecial: "",
+  isSpecial: "1",
   addtext: "",
   notefordev: ""
 }
@@ -454,9 +453,9 @@ const data138 = {
   image: "monkeypuzzle.jpg",
   imagealt: "A statue of a monkey holding it's hands together, stood on a plynth which is adorned with puzzling engravings.",
   optionkey1: "data136",
-  optionkey2: "data121",
+  optionkey2: "data117",
   button1txt: "Go back to the main room",
-  button2txt: "solve the puzzle",
+  button2txt: "Solve the puzzle",
   isSpecial: "1",
   addtext: "",
   notefordev: "This is the puzzle"

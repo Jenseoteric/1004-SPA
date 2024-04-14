@@ -1,5 +1,3 @@
-console.log("check in");
-
 // html elements
 const chapterimage = document.getElementById("chapterimage");
 const chapter = document.getElementById("chapter");
@@ -8,6 +6,8 @@ const button2 = document.getElementById("button2");
 const invlist = document.getElementById("inv");
 const linebreak = document.getElementsByClassName("br");
 const puzzlebox = document.getElementById("puzzlebox");
+const textbox = document.getElementById("text_box");
+
 // other game variables
 let thisid; // current chapter id
 let thistext; // current chapter text
@@ -21,57 +21,93 @@ let candle; // inventory item
 let lit; // triggered by lighting the candle
 let addtext;
 
+// welcome console log for players
+console.log("Welcome to \"Forest Mystery\"");
+
+// timer variables
+let startTime = Date.now(); // gets start time on page load
+let hours;
+let minutes;
+let seconds;
+let millis;
+let timetracker = document.getElementById("timetracker"); // "time passed" paragraph
+
+// setting a paragraph of information to use in game endings
+let infoline1 = "\"Forest Mystery\" by J. McEwan ©2024.";
+let infoline2 = "Candle favicon by Starup Graphic Design, available from iconfinder.com/startupgraphicdesign and licenced as free for commercial use.";
+let infopara = document.createElement("p");
+infopara.setAttribute("style", "font-size: 14px ");
+infopara.innerHTML = ("<br><i>" + infoline1 + "<br>" + infoline2 + "<\/i>");
+
 // load all scripts when ready
 document.addEventListener("DOMContentLoaded", function() {
   readinitialdata();
 });
 
+//
+// TIMER CODE
+//
+
+// timer restart function
+function restartTimer() {
+	startTime = Date.now();
+}
+
+// function to get time elapsed
+function getTimeElapsed() { // calculates time elapsed since page load
+	millis = Date.now() - startTime;
+	hours = Math.floor(millis / (1000*60*60) % 24);
+	minutes = Math.floor(millis / (1000*60) % 60);
+	seconds = Math.floor(millis / 1000) % 60;
+}
+
+//
+// CHAPTER LOADING CODE
+//
 
 // first chapter load   
-
 function readinitialdata() { 
   button2.disabled = true;
   button2.classList.add("disabled");
   thisid = data100;
-  console.log(thisid); // remove later!
   chapter.innerHTML = thisid.text;
   invlist.innerHTML = "Inventory: ";
   option1 = thisid.optionkey1;
   option2 = thisid.optionkey2;
   button1.innerHTML = thisid.button1txt;
   button2.innerHTML = thisid.button2txt;
-  //myimage = thisid.image;
-  chapterimage.src = "images\/" + thisid.image; //myimage
+  chapterimage.src = "images\/" + thisid.image; 
   chapterimage.alt = thisid.imagealt;
 }
 
 // button selectors
-
-button1.addEventListener("click", () => { 
-  nextid = option1; 
+  button1.addEventListener("click", function() {
+  nextid = option1;
   readnextdata();
-})
+}, false);
 
-button2.addEventListener("click", () => {
-  nextid = option2; 
+button2.addEventListener("click", function() {
+  nextid = option2;
   readnextdata();
-})
+}, false);
+
 
 //
 //
-//
-//cheatcode section
-/*var cheatform = document.getElementById("cheatform");
+//DEV TOOLS: cheatcode section, requires html element to be uncommented
+/*
+let cheatform = document.getElementById("cheatform");
 console.log(cheatform);
 cheatform.addEventListener("submit", () => {
-   var cheatcode = document.getElementById("cheatcode").value;
-   console.log(cheatcode);
-   nextid = eval(cheatcode); // ?????
-   readnextdata();
-})*/
+var cheatcode = document.getElementById("cheatcode").value;
+console.log(cheatcode);
+nextid = eval(cheatcode);
+readnextdata();
+});
+*/
+
 
 // load story chapters
-
 function readnextdata() {
   thisid = eval(nextid);
   button2.disabled = false;
@@ -83,7 +119,6 @@ function readnextdata() {
   }
   else  {
   // regular code without special chapter
-    console.log(thisid); // remove later!
     option1 = thisid.optionkey1;
     option2 = thisid.optionkey2;
     chapter.innerHTML = thisid.text;
@@ -96,7 +131,6 @@ function readnextdata() {
 
 // function to load special chapters
 function doSpecial() {
-  console.log(thisid); //remove this later
   let trimid = thisid.id.substr(4); // trimming the id string to just integers
   let checkid = eval(trimid); // casting to integer variable to evaluate in switch
   option1 = thisid.optionkey1;
@@ -104,7 +138,6 @@ function doSpecial() {
   button1.innerHTML = thisid.button1txt;
   button2.innerHTML = thisid.button2txt;
   chapter.innerHTML = thisid.text;
-  //myimage = thisid.image;
   chapterimage.src = "images\/" + thisid.image;
   chapterimage.alt = thisid.imagealt;
 
@@ -112,6 +145,7 @@ function doSpecial() {
 
     case 100:
       timetracker.innerHTML = ""; 
+      restartTimer();
       invlist.innerHTML = "Inventory: ";
       button2.innerHTML = "";
       button2.disabled = true;
@@ -122,12 +156,6 @@ function doSpecial() {
       key = 0;
       break;
 
-    case 101:
-      if (lighter) {
-        option1 = "data119";
-      }
-      break;
-    
     case 102:
       if (!lighter) {
         lighter = 1;
@@ -143,6 +171,12 @@ function doSpecial() {
       button2.disabled = true;
       button2.classList.add("disabled");
       break;  
+    
+    case 107:
+      if (lit) {
+        option2 = data136;
+      }
+      break;
 
     case 111: // check if the candle already exists first!!!
       if (!candle) {
@@ -213,16 +247,18 @@ function doSpecial() {
       button2.innerHTML = "";
       button2.disabled = true;
       button2.classList.add("disabled");
+      chapter.appendChild(infopara); // add game information
       break;
     
     case 127:
       invlist.innerHTML = "";
       getTimeElapsed();
       let text = (hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
-      timetracker.textContent = ("You completed this game in: " + text);
+      timetracker.innerHTML = ("<br>You completed this game in: " + text);
       button2.innerHTML = "";
       button2.disabled = true;
       button2.classList.add("disabled");
+      timetracker.appendChild(infopara); // add game information
       break;
 
     case 130:
@@ -251,6 +287,7 @@ function doSpecial() {
       break;
     
     case 136:
+      puzzlebox.innerHTML = ("");
       if (lit) {
         option2 = data115;
       }
@@ -264,21 +301,17 @@ function doSpecial() {
       break;
 
     default:
-      console.log("do nothing special");
+      console.log("Something unexpected has occurred.");
       break;
   }  
 }
 
 function createPuzzle() {
-  console.log("puzzletime!"); // puzzlebox is the element
-  
-  button1.addEventListener("click", () => {
-    puzzlebox.innerHTML = "";
-    readnextdata();
-  })
-  
   // remove inventory element
   invlist.innerHTML = "";
+
+  // make some space
+  chapter.innerHTML += ("<br><br>");
 
   //createform and inputs
   let puzzleform = document.createElement("form");
@@ -311,11 +344,11 @@ function createPuzzle() {
   puzzleform.appendChild(slot3);
   puzzleform.appendChild(puzzlesubmit);
   puzzlebox.appendChild(puzzleform);
+  //puzzlebox.appendChild(puzzlesubmit);
 
   // add an event listener to the form
-  puzzlesubmit.addEventListener("click", () => {
-    console.log("checkpin");
-
+  puzzlesubmit.addEventListener("click", function() {
+    
     //Create checker variables
     let playerslot1 = 0;
     let playerslot2 = 0;
@@ -338,10 +371,6 @@ function createPuzzle() {
     //check if all three values are correct
     if ((playerslot1 == 1) && (playerslot2 == 1) && (playerslot3 == 1)) {
       puzzlecorrect = 1;
-      console.log("Puzzle solved");
-    }
-    else {
-      console.log("puzzle failed");
     }
      
     // If the puzzle is solved, remove it and go to the next chapter data117
@@ -351,7 +380,7 @@ function createPuzzle() {
       readnextdata();
     }
     else { // reset puzzle if it is not solved
-      chapter.innerHTML = "Enter three characters in the boxes below: <br>Incorrect, try again?";
+      chapter.innerHTML = ("Enter three characters in the boxes below: <br><br>Incorrect, try again?");
     }
-  });
+  }, false);
 }
