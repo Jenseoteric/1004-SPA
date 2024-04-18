@@ -64,7 +64,6 @@ button { /* defines default button */
 	border-width: 4px;
 	border-radius: 25px;
 	overflow: auto; /* div background colour will fill page vertically, adds auto scrollbar */
-	justify-content: start; /* ??? */
 }
 
 @media (prefers-color-scheme: dark) {
