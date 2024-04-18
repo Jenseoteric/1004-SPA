@@ -253,7 +253,7 @@
 },
 {
   "id": "data121",
-  "text": "As you crawl out of the hatch with the Monkey themed puzzle, you look behind you, and to your surprise, where was a hole in the wall, is now just a flawless, flat continuation of the rotten wallpaper. You walk hastily back into the main room, but on the way, a door catches your eye, a door you're not sure was there when you came into the bedroom.",
+  "text": "As you crawl out of the hatch with the monkey themed puzzle, you look behind you. To your surprise, the hole in the wall has disappeared and it is now just a flawless, flat continuation of the rotten wallpaper. You walk hastily back into the main room, but on the way a door catches your eye. A door you're not sure was there when you came into the bedroom.",
   "image": "closedhatchbedroom.jpg", 
   "imagealt": "A dusty and abandoned bedroom in a wooden cabin.",
   "optionkey1": "22",
@@ -289,7 +289,7 @@
 },
 {
   "id": "data124",
-  "text": "You pull the Monkey Key from your pocket, and attempt to unlock the door with the key, but as you insert the key, you realise this key does not fit the lock. You get a sudden electric shock, and for whatever reason the words \"Use the key well, and you may find yourself here again in the future\" manifest in your mind.",
+  "text": "You pull the Monkey Key from your pocket, and attempt to unlock the door - but as you insert the key, you realise it does not fit the lock. You get a sudden electric shock, and for whatever reason the words \"Use the key well, and you may find yourself here again in the future\" manifest in your mind.",
   "image": "doormessage.jpg", 
   "imagealt": "A burst of red and purple electrical energy.",
   "optionkey1": "25",
@@ -301,7 +301,7 @@
 },
 {
   "id": "data125",
-  "text": "In an act of frustration, you take a few steps back, and ram into the door to attempt to knock it off it's hinges, as you do this, the door collapses, and you fall into the room, only you never land on the ground, as you now find yourself free falling through a dank, seemingly endless space. You begin to lose consciousness, and the last thought you have is \"why would anyone build this room!?\"",
+  "text": "In an act of frustration, you take a few steps back and then ram the door with your shoulder to try and knock it off it's hinges. The door collapses and you fall into the room - only you never land on the ground. Instead you find yourself free falling through a dank, seemingly endless space. You begin to lose consciousness, and the last thought you have is \"why would anyone build this room!?\"",
   "image": "void.jpg", 
   "imagealt": "The protagonist looks down past their red plaid shirt and shoes as they fall into a dark void.",
   "optionkey1": "26",
@@ -373,7 +373,7 @@
 },
 {
   "id": "data131",
-  "text": "You notice a hefty rock placed on the fence just to right, the beast suddenly lunges at you, in a terrified panic, you reach over for the boulder with both hands and smack the beast's strange headpiece. An ear splitting *CLANG* sounds and echoes from the forest around you, the monster clasps it's face with it's hands, giving you a moment to escape.",
+  "text": "You notice a hefty rock placed on the fence just to the right. As the beast suddenly lunges at you, in a terrified panic you reach for the boulder with both hands and smack the creature's strange headpiece. An ear splitting *CLANG* sounds and echoes from the forest all around you and the monster clasps it's face with it's hands, giving you a moment to escape.",
   "image": "monsterbash.jpg", 
   "imagealt": "The protagonists hand is holding a large rock which has been used to strike and dent a rusted orange teapot.",
   "optionkey1": "32",
@@ -385,7 +385,7 @@
 },
 {
   "id": "data132",
-  "text": "You run as fast as you can down the path for what feels like forever, and your body is aching with pain, you come across the divergence in the paths you came by earlier, you must think fast before the monster catches up to you",
+  "text": "You run as fast as you can down the path for what feels like forever, your body aching with fear. You come across the divergence in the paths you came by earlier. You must think fast before the monster catches up to you!",
   "image": "2paths.png", 
   "imagealt": "Two paths running through a forest. On the left is a narrow, earthy path shaded by trees. On the right is a neat gravel path lit by moonlight.",
   "optionkey1": "34",
@@ -397,7 +397,7 @@
 },
 {
   "id": "data133",
-  "text": "You commit to running down the path that goes down towards the road, and as you make it to the concrete of the highway, unsure what to do, you remember the door you had seen earlier, and are compelled to try to unlock it with the key you found from the Monkey statue. As the key fits in the lock, a fantastic light emanates from the cracks of the door. The beast is close behind, so you are left with no choice but to go through..",
+  "text": "You commit to running down the gravel path that goes down towards the road. As you make it to the concrete of the highway, you remember the door you saw earlier and are compelled to try to unlock it with the key you found from the monkey statue. As the key fits in the lock, a fantastic light emanates from the cracks of the door. The beast is close behind, so you are left with no choice but to go through..",
   "image": "magicdoor.jpg", 
   "imagealt": "The protagonist is opening a wooden door, and a bright, shimmering light is emanating from the open door.",
   "optionkey1": "27",
@@ -409,7 +409,7 @@
 },
 {
   "id": "data134",
-  "text": "You commit to running down the path that leads to the clearing, but you notice as you run uphill, that the beast is now catching up to you, and even if you reach the clearing, there is nowhere to hide.",
+  "text": "You run down the path that leads to the clearing, but the beast is too fast! It is just behind you now, and even if you could reach the clearing, there is nowhere to hide.",
   "image": "monsterdeath2.jpg", 
   "imagealt": "The words GAME OVER are displayed alongside an image of a wrecked truck lying across a forest road.",
   "optionkey1": "26",
@@ -421,7 +421,7 @@
 },
 {
   "id": "data135",
-  "text": "You commit to running down the path that leads to the clearing, but you notice as you run uphill, that the beast is now catching up to you, and even if you reach the clearing, there is nowhere to hide.",
+  "text": "You run down the path that leads to the clearing, but the beast is too fast! It is just behind you now, and even if you could reach the clearing, there is nowhere to hide..",
   "image": "monsterdeath2.jpg", 
   "imagealt": "The words GAME OVER are displayed alongside an image of a wrecked truck lying across a forest road.",
   "optionkey1": "26",
